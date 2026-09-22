@@ -53,16 +53,6 @@ export default function Header() {
             Book a Free Call
           </Link>
 
-          <div
-            className="h-8 w-8 shrink-0 overflow-hidden rounded-full border border-slate-700 bg-slate-800"
-            title="Your Local Lift Digital team"
-          >
-            {/* <img
-              src="/images/founding-team.jpg"
-              alt="Local Lift Digital founding team"
-              className="h-full w-full object-cover"
-            /> */}
-          </div>
         </div>
 
         {/* Mobile Menu Button */}

@@ -10,10 +10,11 @@
   --text-muted: #cbd5e1;
   --text-soft: #94a3b8;
   --border: #334155;
-  --accent-color: #d03c00;
-  --accent-color-hover: #c73800;
-  --accent-soft: rgba(219, 64, 0, 0.12);
-  --accent-ring: rgba(219, 64, 0, 0.35);
+  --accent-color: #ef4500;
+  --accent-color-page: #e44200;
+  --accent-color-hover: #d93d00;
+  --accent-soft: rgba(239, 69, 0, 0.14);
+  --accent-ring: rgba(239, 69, 0, 0.38);
   --success: #22c55e;
   --shadow-soft: rgba(2, 8, 23, 0.45);
 }
@@ -81,6 +82,10 @@
 
   .text-accent {
     color: var(--accent-color);
+  }
+
+  .text-accent-page {
+    color: var(--accent-color-page);
   }
 
   .bg-accent {

@@ -8,7 +8,7 @@ export default function FinalCTA() {
         <div className="grid overflow-hidden rounded-2xl border border-accent/60 bg-surface lg:grid-cols-2">
           {/* CTA Copy */}
           <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-14">
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-accent">
+            <span className="text-sm text-[#ef4500] font-bold uppercase tracking-[0.2em] text-accent-page">
               Start Growing
             </span>
 
@@ -155,7 +155,7 @@ export default function FinalCTA() {
 
               <button
                 type="submit"
-                className="btn-primary w-full rounded-lg px-6 py-3.5 text-sm font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-950"
+                className="btn-primary bg-[#d73d00] w-full rounded-lg px-6 py-3.5 text-sm font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-950"
               >
                 Claim Your Free Audit
               </button>

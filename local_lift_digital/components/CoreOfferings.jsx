@@ -119,7 +119,7 @@ export default function CoreOfferings() {
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
-          <span className="text-sm font-bold uppercase tracking-[0.2em] text-accent">
+          <span className="text-sm font-bold uppercase tracking-[0.2em] text-accent-page">
             Core Offerings
           </span>
 

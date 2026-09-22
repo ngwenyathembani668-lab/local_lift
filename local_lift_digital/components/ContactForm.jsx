@@ -26,8 +26,6 @@ export default function ContactForm() {
     event.preventDefault();
 
     // Netlify handles the actual form submission in production.
-    // This state can be used to show a success UI after your
-    // submission flow has been connected.
     setSubmitted(true);
   };
 
@@ -202,40 +200,67 @@ export default function ContactForm() {
                 Which service are you most interested in?
               </label>
 
-              <select
-                id="service"
-                name="service"
-                required
-                value={formData.service}
-                onChange={handleChange}
-                className="mt-2 block w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-950 outline-none transition focus:border-orange-600 focus:ring-2 focus:ring-orange-600"
-              >
-                <option value="" disabled>
-                  Select a service
-                </option>
-                <option value="landing-page">
-                  Landing Page
-                </option>
-                <option value="5-page-website">
-                  5-Page Converting Website
-                </option>
-                <option value="gmb-optimization">
-                  Google My Business Optimization
-                </option>
-                <option value="ai-automation">
-                  AI Automation &amp; Assistants
-                </option>
-                <option value="not-sure">
-                  I&apos;m not sure yet
-                </option>
-              </select>
+              {/* Custom Select Wrapper */}
+              <div className="relative mt-2">
+                <select
+                  id="service"
+                  name="service"
+                  required
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="block w-full appearance-none rounded-lg border border-slate-300 bg-white px-4 py-3 pr-11 text-sm text-slate-950 outline-none transition hover:border-slate-400 focus:border-orange-600 focus:ring-2 focus:ring-orange-600"
+                >
+                  <option value="" disabled>
+                    Select a service
+                  </option>
+
+                  <option value="landing-page">
+                    Landing Page
+                  </option>
+
+                  <option value="5-page-website">
+                    5-Page Converting Website
+                  </option>
+
+                  <option value="gmb-optimization">
+                    Google My Business Optimization
+                  </option>
+
+                  <option value="ai-automation">
+                    AI Automation &amp; Assistants
+                  </option>
+
+                  <option value="not-sure">
+                    I&apos;m not sure yet
+                  </option>
+                </select>
+
+                {/* Custom Arrow */}
+                <div
+                  className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4 text-slate-500"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Submit */}
           <button
             type="submit"
-            className="mt-7 w-full rounded-lg bg-orange-600 px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
+            className="mt-7 w-full rounded-lg bg-[#d73d00] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
           >
             Let&apos;s Talk
           </button>

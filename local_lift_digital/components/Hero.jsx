@@ -27,7 +27,7 @@ export default function Hero() {
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/pricing"
-                className="btn-primary inline-flex items-center justify-center rounded-lg px-7 py-3.5 text-sm font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-950"
+                className="btn-primary bg-[#d73d00] inline-flex items-center justify-center rounded-lg px-7 py-3.5 text-sm font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-950"
               >
                 See Monthly Plans
               </Link>
@@ -62,9 +62,8 @@ export default function Hero() {
                 ].map((avatar, index) => (
                   <div
                     key={avatar.src}
-                    className={`relative h-11 w-11 overflow-hidden rounded-full border-2 border-page bg-card-alt ${
-                      index > 0 ? "-ml-3" : ""
-                    }`}
+                    className={`relative h-11 w-11 overflow-hidden rounded-full border-2 border-page bg-card-alt ${index > 0 ? "-ml-3" : ""
+                      }`}
                   >
                     {/* <img
                       src={avatar.src}
@@ -188,7 +187,7 @@ export default function Hero() {
             </div>
 
             {/* Supporting Metric */}
-            <div className="absolute -bottom-5 right-4 hidden rounded-xl border border-soft bg-card px-5 py-3 shadow-xl sm:block lg:-right-5">
+            <div className="mt-5 rounded-xl border border-soft bg-card px-5 py-3 shadow-xl sm:absolute sm:-bottom-5 sm:right-4 sm:mt-0 sm:block lg:-right-5">
               <p className="text-xs font-medium text-soft">
                 Businesses supported
               </p>

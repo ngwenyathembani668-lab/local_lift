@@ -28,7 +28,7 @@ export default function GrowthTeam() {
 
             {/* Human presence label */}
             <div className="absolute -bottom-7 right-5 border border-soft bg-page px-5 py-3 shadow-xl">
-              <p className="text-xs font-bold uppercase tracking-wider text-accent">
+              <p className="text-xs font-bold uppercase tracking-wider text-accent-page">
                 Your Growth Team
               </p>
               <p className="mt-1 text-sm font-medium text-primary">
@@ -39,7 +39,7 @@ export default function GrowthTeam() {
 
           {/* Right Column — Copy */}
           <div>
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-accent">
+            <span className="text-sm text-[#ef4500] font-bold uppercase tracking-[0.2em] text-accent-page">
               Meet Your Growth Team
             </span>
 
