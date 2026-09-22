@@ -115,20 +115,20 @@ const services = [
 
 export default function CoreOfferings() {
   return (
-    <section className="bg-slate-950 px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
+    <section className="bg-page px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
-          <span className="text-sm font-bold uppercase tracking-[0.2em] text-amber-600">
+          <span className="text-sm font-bold uppercase tracking-[0.2em] text-accent">
             Core Offerings
           </span>
 
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-primary sm:text-4xl lg:text-5xl">
             Everything Your Business Needs to{" "}
-            <span className="text-amber-600">Dominate Online.</span>
+            <span className="text-accent">Dominate Online.</span>
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-slate-400">
+          <p className="mt-5 text-lg leading-8 text-muted">
             From your first website visitor to your next qualified lead, we
             build the digital systems that help local businesses compete,
             convert, and grow.
@@ -140,24 +140,24 @@ export default function CoreOfferings() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="group flex h-full flex-col rounded-xl border border-slate-800 bg-slate-900 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-amber-600"
+              className="group flex h-full flex-col rounded-xl border border-soft bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent"
             >
               {/* Icon */}
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-slate-800 bg-slate-950 text-amber-600 transition-colors duration-300 group-hover:border-amber-600/40">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-soft bg-page text-accent transition-colors duration-300 group-hover:border-accent/40">
                 {service.icon}
               </div>
 
               {/* Content */}
               <div className="mt-7">
-                <h3 className="text-xl font-bold leading-tight text-white">
+                <h3 className="text-xl font-bold leading-tight text-primary">
                   {service.title}
                 </h3>
 
-                <p className="mt-3 text-sm font-semibold text-amber-600">
+                <p className="mt-3 text-sm font-semibold text-accent">
                   {service.focus}
                 </p>
 
-                <p className="mt-4 text-sm leading-7 text-slate-400">
+                <p className="mt-4 text-sm leading-7 text-muted">
                   {service.description}
                 </p>
               </div>
@@ -165,7 +165,7 @@ export default function CoreOfferings() {
               {/* AI Human Highlight */}
               {service.title === "Custom AI Automation & Chatbots" && (
                 <div className="mt-auto pt-6">
-                  <div className="rounded-lg border border-slate-800 bg-slate-950 px-3.5 py-3 text-xs font-medium leading-5 text-slate-300">
+                  <div className="rounded-lg border border-soft bg-page px-3.5 py-3 text-xs font-medium leading-5 text-muted">
                     💡 Implemented &amp; monitored live by our tech team.
                   </div>
                 </div>

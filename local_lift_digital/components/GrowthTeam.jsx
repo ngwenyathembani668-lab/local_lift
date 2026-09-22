@@ -3,18 +3,18 @@ import team from "../images/team.jpg";
 
 export default function GrowthTeam() {
   return (
-    <section className="bg-slate-900 px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
+    <section className="bg-surface px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           {/* Left Column — Team Image */}
           <div className="relative">
             {/* Solid amber accent frame */}
             <div
-              className="absolute -bottom-4 -left-4 h-full w-full border-2 border-amber-600"
+              className="absolute -bottom-4 -left-4 h-full w-full border-2 border-accent"
               aria-hidden="true"
             />
 
-            <div className="relative overflow-hidden border-2 border-slate-700 bg-slate-800">
+            <div className="relative overflow-hidden border-2 border-soft bg-surface">
               <div className="aspect-4/3">
                 <Image
                   src={team}
@@ -27,11 +27,11 @@ export default function GrowthTeam() {
             </div>
 
             {/* Human presence label */}
-            <div className="absolute -bottom-7 right-5 border border-slate-700 bg-slate-950 px-5 py-3 shadow-xl">
-              <p className="text-xs font-bold uppercase tracking-wider text-amber-600">
+            <div className="absolute -bottom-7 right-5 border border-soft bg-page px-5 py-3 shadow-xl">
+              <p className="text-xs font-bold uppercase tracking-wider text-accent">
                 Your Growth Team
               </p>
-              <p className="mt-1 text-sm font-medium text-white">
+              <p className="mt-1 text-sm font-medium text-primary">
                 Real people. Real support.
               </p>
             </div>
@@ -39,15 +39,15 @@ export default function GrowthTeam() {
 
           {/* Right Column — Copy */}
           <div>
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-amber-600">
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-accent">
               Meet Your Growth Team
             </span>
 
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-primary sm:text-4xl lg:text-5xl">
               Real Humans Scaling Your Digital Presence.
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-400">
+            <p className="mt-6 text-lg leading-8 text-muted">
               Unlike cold automated agencies, Local Lift Digital pairs every
               business owner with a dedicated local digital strategist who
               actually knows your business and understands what you&#39;re trying
@@ -68,8 +68,8 @@ export default function GrowthTeam() {
             </p>
 
             {/* Founder Quote / Signature Callout */}
-            <div className="mt-9 border-l-2 border-amber-600 bg-slate-950 px-6 py-6">
-              <p className="text-lg font-medium leading-8 text-slate-200">
+            <div className="mt-9 border-l-2 border-accent bg-page px-6 py-6">
+              <p className="text-lg font-medium leading-8 text-muted">
                 “We don&#39;t want to be another agency your business has to chase.
                 We want to be the team you know is already taking care of your
                 digital presence.”
@@ -77,20 +77,20 @@ export default function GrowthTeam() {
 
               <div className="mt-5 flex items-end justify-between gap-6">
                 <div>
-                  <p className="text-sm font-bold text-white">
+                  <p className="text-sm font-bold text-primary">
                     Founder, Local Lift Digital
                   </p>
-                  <p className="mt-1 text-xs text-slate-500">
+                  <p className="mt-1 text-xs text-soft">
                     Your partner in local digital growth
                   </p>
                 </div>
 
                 {/* Signature Graphic Placeholder */}
                 <div
-                  className="flex h-12 min-w-28 items-center justify-center border-b border-slate-700 px-3"
+                  className="flex h-12 min-w-28 items-center justify-center border-b border-soft px-3"
                   aria-label="Founder signature placeholder"
                 >
-                  <span className="font-serif text-xl italic text-slate-400">
+                  <span className="font-serif text-xl italic text-muted">
                     Your Signature
                   </span>
                 </div>

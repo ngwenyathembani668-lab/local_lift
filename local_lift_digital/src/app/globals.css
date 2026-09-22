@@ -2,15 +2,33 @@
 @import "tailwindcss";
 
 :root {
-  --accent-color: #d13d00;
-  --accent-color-hover: #b63100;
-  --accent-ring: rgba(209, 61, 0, 0.35);
+  --bg-page: #020817;
+  --bg-surface: #0f172a;
+  --bg-card: #111827;
+  --bg-card-alt: #0b1220;
+  --text-primary: #f8fafc;
+  --text-muted: #cbd5e1;
+  --text-soft: #94a3b8;
+  --border: #334155;
+  --accent-color: #d03c00;
+  --accent-color-hover: #c73800;
+  --accent-soft: rgba(219, 64, 0, 0.12);
+  --accent-ring: rgba(219, 64, 0, 0.35);
+  --success: #22c55e;
+  --shadow-soft: rgba(2, 8, 23, 0.45);
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: 'Inter', sans-serif;
-    /* @apply bg-slate-950 text-white antialiased; */
+    background: var(--bg-page);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1,
@@ -20,24 +38,94 @@
   h5,
   h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-primary);
+  }
+
+  a {
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
   }
 }
 
 @layer components {
+  .bg-page {
+    background-color: var(--bg-page);
+  }
+
+  .bg-surface {
+    background-color: var(--bg-surface);
+  }
+
+  .bg-card {
+    background-color: var(--bg-card);
+  }
+
+  .bg-card-alt {
+    background-color: var(--bg-card-alt);
+  }
+
+  .text-primary {
+    color: var(--text-primary);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .text-soft {
+    color: var(--text-soft);
+  }
+
+  .border-soft {
+    border-color: var(--border);
+  }
+
+  .text-accent {
+    color: var(--accent-color);
+  }
+
+  .bg-accent {
+    background-color: var(--accent-color);
+  }
+
+  .bg-accent-hover {
+    background-color: var(--accent-color-hover);
+  }
+
+  .border-accent {
+    border-color: var(--accent-color);
+  }
+
+  .ring-accent {
+    box-shadow: 0 0 0 2px var(--accent-ring);
+  }
+
   .btn-primary {
     background-color: var(--accent-color);
     color: white;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 12px 30px rgba(209, 61, 0, 0.2);
+    border: 1px solid var(--accent-color);
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 12px 28px rgba(209, 61, 0, 0.2);
   }
 
   .btn-primary:hover {
     background-color: var(--accent-color-hover);
+    border-color: var(--accent-color-hover);
   }
 
   .btn-primary:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px var(--accent-ring);
+    box-shadow: 0 0 0 3px var(--accent-ring);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
   }
 }
 

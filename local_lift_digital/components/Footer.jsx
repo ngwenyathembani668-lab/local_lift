@@ -81,29 +81,29 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-800 bg-slate-950">
+    <footer className="border-t border-soft bg-page">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-10">
           {/* Brand */}
           <div>
             <Link
               href="/"
-              className="inline-block text-xl font-extrabold tracking-tight text-white transition-colors hover:text-amber-600"
+              className="inline-block text-xl font-extrabold tracking-tight text-primary transition-colors hover:text-accent"
             >
               Local Lift Digital
-              <span className="ml-1 text-amber-600" aria-hidden="true">
+              <span className="ml-1 text-accent" aria-hidden="true">
                 .
               </span>
             </Link>
 
-            <p className="mt-5 max-w-sm text-sm leading-7 text-slate-400">
+            <p className="mt-5 max-w-sm text-sm leading-7 text-muted">
               Delivering high-converting websites, local SEO, and custom AI
               solutions for local businesses.
             </p>
 
             {/* Online status */}
             <div className="mt-7 flex items-center gap-3">
-              <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full border border-slate-700 bg-slate-800">
+              <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full border border-soft bg-surface">
                 <Image
                   src={team}
                   height={36}
@@ -122,7 +122,7 @@ export default function Footer() {
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
                 </span>
 
-                <span className="text-xs font-medium leading-5 text-slate-400">
+                <span className="text-xs font-medium leading-5 text-muted">
                   Team online &amp; monitoring client systems.
                 </span>
               </div>
@@ -137,7 +137,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Follow Local Lift Digital on ${social.label}`}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-800 bg-slate-900 text-slate-400 transition-all duration-200 hover:border-amber-600 hover:bg-slate-900 hover:text-amber-600"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-soft bg-card text-muted transition-all duration-200 hover:border-accent hover:bg-card hover:text-accent"
                 >
                   <span className="h-5 w-5">{social.icon}</span>
                 </a>
@@ -147,7 +147,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-soft">
               Company
             </h2>
 
@@ -169,7 +169,7 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-soft">
               Solutions
             </h2>
 
@@ -191,21 +191,21 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-soft">
               Connect With Us
             </h2>
 
             <div className="mt-5 space-y-3">
               <a
                 href="mailto:info@localliftdigital.com"
-                className="block text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-amber-600"
+                className="block text-sm font-medium text-muted transition-colors duration-200 hover:text-accent"
               >
                 info@localliftdigital.com
               </a>
 
               <a
                 href="tel:+27694483699"
-                className="block text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-amber-600"
+                className="block text-sm font-medium text-muted transition-colors duration-200 hover:text-accent"
               >
                 +27 69 448 3699
               </a>
@@ -213,7 +213,7 @@ export default function Footer() {
 
             <Link
               href="/contact"
-              className="mt-6 inline-flex items-center text-sm font-bold text-white transition-colors duration-200 hover:text-amber-600"
+              className="mt-6 inline-flex items-center text-sm font-bold text-primary transition-colors duration-200 hover:text-accent"
             >
               Start a conversation
               <span className="ml-2" aria-hidden="true">
@@ -224,13 +224,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-14 border-t border-slate-800 pt-7">
-          <div className="flex flex-col gap-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 border-t border-soft pt-7">
+          <div className="flex flex-col gap-4 text-xs text-soft sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 Local Lift Digital. All rights reserved.</p>
 
             <Link
               href="/privacy-policy"
-              className="transition-colors duration-200 hover:text-amber-600"
+              className="transition-colors duration-200 hover:text-accent"
             >
               Privacy &amp; Cookie Policy
             </Link>
