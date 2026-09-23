@@ -1,4 +1,6 @@
 import Link from "next/link";
+import thembani from "../images/Thembani.jpg"
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -48,7 +50,7 @@ export default function Hero() {
               <div className="flex shrink-0 items-center pl-2">
                 {[
                   {
-                    src: "/images/team-member-1.jpg",
+                    src: thembani,
                     alt: "Local Lift Digital team member",
                   },
                   {
@@ -61,15 +63,17 @@ export default function Hero() {
                   },
                 ].map((avatar, index) => (
                   <div
-                    key={avatar.src}
+                    key={`${avatar.alt}-${index}`}
                     className={`relative h-11 w-11 overflow-hidden rounded-full border-2 border-page bg-card-alt ${index > 0 ? "-ml-3" : ""
                       }`}
                   >
-                    {/* <img
+                    <Image
                       src={avatar.src}
+                      width={44}
+                      height={44}
                       alt={avatar.alt}
-                      className="h-full w-full object-cover"
-                    /> */}
+                      className="h-11 w-11 object-cover"
+                    />
                   </div>
                 ))}
               </div>

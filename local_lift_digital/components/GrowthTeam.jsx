@@ -1,5 +1,5 @@
 import Image from "next/image";
-import team from "../images/team.jpg";
+import thembani from "../images/Thembani.jpg";
 
 export default function GrowthTeam() {
   return (
@@ -17,7 +17,7 @@ export default function GrowthTeam() {
             <div className="relative overflow-hidden border-2 border-soft bg-surface">
               <div className="aspect-4/3">
                 <Image
-                  src={team}
+                  src={thembani}
                   width={800}
                   height={600}
                   alt="The Local Lift Digital team collaborating in their office"

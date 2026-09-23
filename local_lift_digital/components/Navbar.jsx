@@ -48,7 +48,7 @@ export default function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <Link
             href="/contact"
-            className="rounded-lg bg-[#d13d00] px-5 py-2.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
+            className="rounded-lg bg-[#d73d00] px-5 py-2.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
           >
             Book a Free Call
           </Link>

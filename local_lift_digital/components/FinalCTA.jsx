@@ -1,5 +1,5 @@
 import Image from "next/image";
-import team from "../images/team.jpg";
+import thembani from "../images/Thembani.jpg";
 
 export default function FinalCTA() {
   return (
@@ -164,7 +164,7 @@ export default function FinalCTA() {
               <div className="flex items-center justify-center gap-3 pt-1">
                 <div className="h-8 w-8 overflow-hidden rounded-full border border-soft bg-surface">
                   <Image
-                  src={team}
+                  src={thembani}
                   width={800}
                   height={600}
                   alt="Sarah, Lead Coordinator"
@@ -173,7 +173,7 @@ export default function FinalCTA() {
                 </div>
 
                 <p className="text-xs font-medium text-soft">
-                  Sarah reviews all submissions within 2 hours.
+                  Thembani reviews all submissions within 2 hours.
                 </p>
               </div>
             </form>
