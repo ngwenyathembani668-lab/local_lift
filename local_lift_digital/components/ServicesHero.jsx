@@ -14,7 +14,7 @@ export default function ServicesHero() {
         {/* Heading */}
         <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
           Digital Solutions Built to Scale Your{" "}
-          <span className="text-amber-600">Local Business.</span>
+          <span className="text-[#d73d00]">Local Business.</span>
         </h1>
 
         {/* Subheadline */}
@@ -79,7 +79,7 @@ export default function ServicesHero() {
         <div className="mt-10">
           <Link
             href="#pricing"
-            className="inline-flex items-center justify-center rounded-lg bg-[#b55a00] px-7 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-amber-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
+            className="inline-flex items-center justify-center rounded-lg bg-[#d73d00] px-7 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-amber-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
           >
             View Our Service Plans
             <span className="ml-2 text-base" aria-hidden="true">

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import thembani from "../images/Thembani.jpg";
+import thembani from "../images/my-image.png";
 
 export default function GrowthTeam() {
   return (

@@ -88,14 +88,14 @@ export default function PricingPlans() {
               key={tier.name}
               className={`relative flex flex-col rounded-2xl border bg-slate-900 p-6 sm:p-8 ${
                 tier.popular
-                  ? "border-amber-600 ring-1 ring-amber-600"
+                  ? "border-[#d73d00] ring-1 ring-amber-600"
                   : "border-slate-800"
               }`}
             >
               {/* Popular Badge */}
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex whitespace-nowrap rounded-full bg-[#b55a00] px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-white">
+                  <span className="inline-flex whitespace-nowrap rounded-full bg-[#d73d00] px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-white">
                     Most Popular
                   </span>
                 </div>
@@ -154,7 +154,7 @@ export default function PricingPlans() {
                   href="/contact"
                   className={`flex w-full items-center justify-center rounded-lg px-5 py-3.5 text-sm font-bold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900 ${
                     tier.popular
-                      ? "bg-[#b55a00] text-white hover:bg-amber-500 hover:shadow-lg"
+                      ? "bg-[#d73d00] text-white hover:bg-amber-500 hover:shadow-lg"
                       : "border border-white bg-transparent text-white hover:bg-white hover:text-slate-950"
                   }`}
                 >

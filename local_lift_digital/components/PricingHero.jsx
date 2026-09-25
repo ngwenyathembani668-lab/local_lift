@@ -89,7 +89,7 @@ export default function PricingHero() {
         {/* Headline */}
         <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
           Predictable Monthly Plans.
-          <span className="block text-amber-600">
+          <span className="block text-[#d73d00]">
             No Massive Upfront Costs.
           </span>
         </h1>
@@ -109,7 +109,7 @@ export default function PricingHero() {
               className="flex items-center justify-center gap-3 rounded-xl border border-slate-800 bg-slate-900 px-4 py-4 text-left"
             >
               <span
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-600 text-white"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#d73d00] text-white"
                 aria-hidden="true"
               >
                 {item.icon}
