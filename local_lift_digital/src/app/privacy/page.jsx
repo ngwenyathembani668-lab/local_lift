@@ -1,215 +1,203 @@
-import Image from "next/image";
+import Link from "next/link";
 
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 
 export const metadata = {
-  title: "Privacy Policy & Cookie Configurations | Local Lift Digital",
+  title: "Privacy Policy | Local Lift Digital",
   description:
-    "Read the official privacy policy and cookie deployment disclosures for Local Lift Digital. Learn how we securely protect your business data.",
+    "Read the Local Lift Digital privacy policy and learn how we protect your data, use cookies, and handle review submissions.",
 };
 
 export default function PrivacyPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      {/* Navigation */}
+    <div className="min-h-screen bg-slate-950 text-white">
       <Navbar />
 
-      {/* Privacy Policy */}
-      <article className="mx-auto max-w-3xl space-y-12 px-4 py-16">
-        {/* Header */}
-        <header className="space-y-5 border-b border-slate-800 pb-10">
-          <p className="text-sm font-semibold uppercase tracking-widest text-amber-600">
-            Local Lift Digital
-          </p>
+      <main>
+        <article className="mx-auto max-w-3xl space-y-12 px-4 py-16 sm:px-6 lg:px-8">
+          <header className="space-y-4">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
+              Privacy &amp; Data Protection
+            </p>
 
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Privacy and Cookie Policy
-          </h1>
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+              Privacy and Cookie Policy
+            </h1>
 
-          <p className="text-sm text-slate-500">
-            Last Updated: October 2026
-          </p>
+            <p className="text-sm text-slate-400">Last Updated: October 2026</p>
 
-          <p className="text-lg leading-8 text-slate-400">
-            This policy explains how Local Lift Digital collects, uses,
-            protects, and manages information when you interact with our
-            website, marketing services, forms, and digital platforms.
-          </p>
-        </header>
+            <p className="max-w-2xl text-lg leading-8 text-slate-300">
+              At Local Lift Digital, we respect your privacy and are committed
+              to protecting the personal information you share with us while
+              using our website and services.
+            </p>
+          </header>
 
-        {/* Section 1 */}
-        <section
-          aria-labelledby="data-collection"
-          className="space-y-5"
-        >
-          <h2
-            id="data-collection"
-            className="text-2xl font-bold tracking-tight sm:text-3xl"
-          >
-            1. Introduction &amp; Data Collection
-          </h2>
+          <section className="space-y-5">
+            <h2 className="text-2xl font-bold text-white">
+              1. Introduction &amp; Data Collection
+            </h2>
 
-          <p className="leading-8 text-slate-400">
-            Local Lift Digital respects the privacy of business owners,
-            prospective clients, customers, and website visitors. We collect
-            only information that is reasonably necessary to respond to
-            enquiries, provide our services, communicate with clients, and
-            improve our digital experiences.
-          </p>
+            <div className="space-y-4 leading-7 text-slate-300">
+              <p>
+                Local Lift Digital collects information that you voluntarily
+                provide when interacting with our website, requesting our
+                services, submitting forms, or communicating with our team.
+              </p>
 
-          <p className="leading-8 text-slate-400">
-            When you submit information through forms on our website,
-            including forms powered by Netlify Forms, we may collect details
-            such as your name, business name, business email address, phone
-            number, website address, and information you voluntarily include
-            in your enquiry.
-          </p>
+              <p>
+                Depending on how you interact with our website, this may include
+                your name, business information, email address, and other
+                information necessary to respond to your enquiry or provide
+                requested services.
+              </p>
 
-          <p className="leading-8 text-slate-400">
-            We use this information to respond to enquiries, prepare
-            proposals, provide requested services, manage client
-            communications, and deliver relevant business support. We do not
-            require you to provide information that is not necessary for the
-            purpose of your interaction with us.
-          </p>
-        </section>
-
-        {/* Section 2 */}
-        <section
-          aria-labelledby="cookies"
-          className="space-y-5"
-        >
-          <h2
-            id="cookies"
-            className="text-2xl font-bold tracking-tight sm:text-3xl"
-          >
-            2. Why We Use Cookies
-          </h2>
-
-          <p className="leading-8 text-slate-400">
-            Cookies and similar technologies may be used to understand how
-            visitors interact with our website and to help us improve the
-            experience for local business owners researching our services.
-          </p>
-
-          <div className="space-y-6 border-l-2 border-amber-600 pl-6">
-            <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-white">
-                Analytical Cookies
-              </h3>
-
-              <p className="leading-7 text-slate-400">
-                Analytical cookies help us understand website performance,
-                including which pages receive traffic, how visitors navigate
-                the site, and where improvements may be required. This
-                information is generally used in aggregated form to improve
-                website performance and usability.
+              <p>
+                Our website may use web forms to process information submitted
+                through online enquiries. Information submitted through these
+                forms is used to respond to enquiries, provide requested
+                services, and communicate with customers.
               </p>
             </div>
+          </section>
 
-            <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-white">
-                Marketing Pixels
-              </h3>
+          <section className="space-y-5">
+            <h2 className="text-2xl font-bold text-white">
+              2. Cookies &amp; Website Analytics
+            </h2>
 
-              <p className="leading-7 text-slate-400">
-                Marketing pixels may be used to measure advertising
-                performance and support retargeting campaigns. For example,
-                these technologies can help us show relevant Local Lift
-                Digital advertising to local business owners who have
-                previously interacted with our website or content.
+            <div className="space-y-4 leading-7 text-slate-300">
+              <p>
+                Our website may use cookies and similar technologies to help us
+                understand how visitors interact with the site and improve the
+                user experience.
+              </p>
+
+              <p>
+                Analytics cookies may be used to understand traffic, visitor
+                behavior, and page performance. Where applicable, marketing
+                cookies may also be used to measure campaign performance and
+                improve relevant opportunities.
+              </p>
+
+              <p>
+                You may control or disable cookies through your browser
+                settings. Disabling certain cookies may impact website
+                functionality.
               </p>
             </div>
-          </div>
+          </section>
 
-          <p className="leading-8 text-slate-400">
-            Depending on the technologies deployed on the website, you may be
-            able to manage certain cookie preferences through your browser
-            settings or an available consent mechanism. Disabling some
-            cookies may affect certain website functionality or measurement
-            capabilities.
-          </p>
-        </section>
+          <section className="space-y-5">
+            <h2 className="text-2xl font-bold text-white">
+              3. Data Protection &amp; Security
+            </h2>
 
-        {/* Section 3 */}
-        <section
-          aria-labelledby="data-security"
-          className="space-y-5"
-        >
-          <h2
-            id="data-security"
-            className="text-2xl font-bold tracking-tight sm:text-3xl"
-          >
-            3. Data Protection &amp; Security
-          </h2>
+            <div className="space-y-4 leading-7 text-slate-300">
+              <p>
+                Local Lift Digital takes reasonable technical and organizational
+                measures to protect personal information from unauthorized
+                access, misuse, alteration, or disclosure.
+              </p>
 
-          <p className="leading-8 text-slate-400">
-            We take reasonable technical and organizational measures to
-            protect information entrusted to Local Lift Digital against
-            unauthorized access, disclosure, alteration, or loss.
-          </p>
+              <p>
+                Access to information is limited to circumstances where it is
+                reasonably required to provide services, operate our website,
+                respond to enquiries, or maintain our business operations.
+              </p>
 
-          <p className="leading-8 text-slate-400">
-            Access to client and enquiry information is limited to people and
-            service providers who require that information to perform
-            legitimate business functions. Where third-party platforms are
-            used to process forms, analytics, hosting, communication, or
-            marketing data, those services may process information according
-            to their own privacy and security practices.
-          </p>
-
-          <p className="leading-8 text-slate-400">
-            No online transmission or storage system can be guaranteed to be
-            completely secure. We therefore continuously review our digital
-            processes and take reasonable steps to reduce privacy and security
-            risks.
-          </p>
-        </section>
-
-        {/* Human Support / Compliance Contact */}
-        <section
-          aria-labelledby="privacy-contact"
-          className="border border-slate-800 bg-slate-900 p-6 sm:p-8"
-        >
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
-            {/* Data Compliance Lead Avatar Placeholder */}
-            <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-slate-800">
-              <Image
-                src="/images/data-compliance-lead.jpg"
-                alt="Data Compliance Lead"
-                fill
-                sizes="40px"
-                className="object-cover"
-              />
+              <p>
+                While we take reasonable steps to protect information, no
+                internet transmission or electronic storage system can be
+                guaranteed to be completely secure.
+              </p>
             </div>
+          </section>
 
-            <div className="space-y-2">
-              <h2
-                id="privacy-contact"
-                className="font-semibold text-white"
+          <section className="space-y-5">
+            <h2 className="text-2xl font-bold text-white">
+              4. User Reviews &amp; Authentication
+            </h2>
+
+            <div className="space-y-4 leading-7 text-slate-300">
+              <p>
+                When users choose to leave a review on our website, we may use
+                authentication services to verify account ownership and prevent
+                fraudulent or automated submissions. This may involve a public
+                profile name, email reference, and avatar information associated
+                with the authenticated account.
+              </p>
+
+              <p>
+                Review data is used to validate authenticity, improve trust in
+                our client feedback, and support transparent communication about
+                our work.
+              </p>
+            </div>
+          </section>
+
+          <section className="border-l-4 border-amber-600 bg-slate-900 p-6 sm:p-8">
+            <h2 className="text-lg font-bold text-white">
+              Privacy Questions or Data Requests?
+            </h2>
+
+            <p className="mt-3 text-sm leading-6 text-slate-400">
+              If you have questions about this policy or want to request access,
+              correction, or deletion of your information, contact our privacy
+              team.
+            </p>
+
+            <a
+              href="mailto:privacy@localliftdigital.com"
+              className="mt-4 inline-flex font-semibold text-amber-600 transition-colors hover:text-amber-500"
+            >
+              privacy@localliftdigital.com
+            </a>
+          </section>
+
+          <section className="space-y-5">
+            <h2 className="text-2xl font-bold text-white">Your Privacy Rights</h2>
+
+            <div className="space-y-4 leading-7 text-slate-300">
+              <p>
+                Depending on applicable privacy legislation, you may have rights
+                relating to the personal information we hold about you, including
+                the right to request access, correction, or deletion of that
+                information.
+              </p>
+
+              <p>
+                If you have concerns about how your personal information is
+                handled and are unable to resolve the matter directly with us,
+                you may contact the relevant authority in your jurisdiction.
+              </p>
+            </div>
+          </section>
+
+          <section className="border-t border-slate-800 pt-8">
+            <p className="text-sm leading-6 text-slate-400">
+              For more information, return to our{" "}
+              <Link
+                href="/"
+                className="font-semibold text-amber-600 transition-colors hover:text-amber-500"
               >
-                Privacy &amp; Compliance Support
-              </h2>
+                homepage
+              </Link>{" "}
+              or explore our{" "}
+              <Link
+                href="/cases"
+                className="font-semibold text-amber-600 transition-colors hover:text-amber-500"
+              >
+                case studies
+              </Link>
+              .
+            </p>
+          </section>
+        </article>
+      </main>
 
-              <p className="leading-7 text-slate-400">
-                Have questions about your data privacy? Reach our compliance
-                desk directly at{" "}
-                <a
-                  href="mailto:privacy@localliftdigital.com"
-                  className="font-semibold text-amber-600 transition hover:text-amber-500"
-                >
-                  privacy@localliftdigital.com
-                </a>
-                .
-              </p>
-            </div>
-          </div>
-        </section>
-      </article>
-
-      {/* Footer */}
       <Footer />
-    </main>
+    </div>
   );
 }

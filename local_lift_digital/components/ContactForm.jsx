@@ -260,7 +260,7 @@ export default function ContactForm() {
           {/* Submit */}
           <button
             type="submit"
-            className="mt-7 w-full rounded-lg bg-[#d73d00] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
+            className="mt-7 w-full rounded-lg bg-[#d73d00] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-[#b63200] focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
           >
             Let&apos;s Talk
           </button>

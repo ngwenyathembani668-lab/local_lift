@@ -10,6 +10,8 @@ export default function Header() {
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
     { label: "Pricing", href: "/pricing" },
+    { label: "Reviews", href: "/cases" },
+    { label: "Contact", href: "/contact" },
     { label: "Blog", href: "/blog" },
   ];
 
@@ -48,7 +50,7 @@ export default function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <Link
             href="/contact"
-            className="rounded-lg bg-[#d73d00] px-5 py-2.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
+            className="rounded-lg bg-[#d73d00] px-5 py-2.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-[#b63200] focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
           >
             Book a Free Call
           </Link>
@@ -125,21 +127,21 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="flex-1 rounded-lg bg-[#d13d00] px-5 py-3 text-center text-sm font-bold text-white transition-colors duration-200 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
+                className="flex-1 rounded-lg bg-[#d13d00] px-5 py-3 text-center text-sm font-bold text-white transition-colors duration-200 hover:bg-[#b63200] focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
               >
                 Book a Free Call
               </Link>
 
-              <div
+              {/* <div
                 className="h-8 w-8 shrink-0 overflow-hidden rounded-full border border-slate-700 bg-slate-800"
                 title="Your Local Lift Digital team"
               >
-                {/* <img
+                <img
                   src="/images/founding-team.jpg"
                   alt="Local Lift Digital founding team"
                   className="h-full w-full object-cover"
-                /> */}
-              </div>
+                />
+              </div> */}
             </div>
           </div>
         </div>

@@ -117,7 +117,7 @@ export default function NewsletterBox() {
 
                                     <button
                                         type="submit"
-                                        className="inline-flex shrink-0 items-center justify-center rounded-lg bg-[#b55a00] px-5 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:bg-amber-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
+                                        className="inline-flex shrink-0 items-center justify-center rounded-lg bg-[#b55a00] px-5 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:bg-[#b63200] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
                                     >
                                         Join Free Newsletter
                                         <span className="ml-2" aria-hidden="true">

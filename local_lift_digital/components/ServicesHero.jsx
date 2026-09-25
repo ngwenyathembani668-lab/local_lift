@@ -79,7 +79,7 @@ export default function ServicesHero() {
         <div className="mt-10">
           <Link
             href="#pricing"
-            className="inline-flex items-center justify-center rounded-lg bg-[#d73d00] px-7 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-amber-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
+            className="inline-flex items-center justify-center rounded-lg bg-[#d73d00] px-7 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-[#b63200] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
           >
             View Our Service Plans
             <span className="ml-2 text-base" aria-hidden="true">

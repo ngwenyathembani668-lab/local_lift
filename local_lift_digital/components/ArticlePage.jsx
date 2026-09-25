@@ -75,7 +75,7 @@ export default async function ArticlePage({ params }) {
 
           <Link
             href="/blog"
-            className="mt-8 inline-flex items-center rounded-lg bg-amber-600 px-6 py-3 font-semibold text-white transition hover:bg-amber-700"
+            className="mt-8 inline-flex items-center rounded-lg bg-amber-600 px-6 py-3 font-semibold text-white transition hover:bg-[#b63200]"
           >
             Back to Insights
           </Link>
@@ -241,7 +241,7 @@ export default async function ArticlePage({ params }) {
 
             <Link
               href="/blog"
-              className="mt-8 inline-flex rounded-lg bg-amber-600 px-6 py-3 font-semibold text-white transition hover:bg-amber-700"
+              className="mt-8 inline-flex rounded-lg bg-amber-600 px-6 py-3 font-semibold text-white transition hover:bg-[#b63200]"
             >
               Explore More Insights
             </Link>

@@ -1,9 +1,14 @@
 const services = [
   {
+    // title: "High-Converting Landing Pages",
+    // focus: "Fast lead capture",
+    // description:
+    //   "Turn visitors into leads with focused landing pages built around clear messaging, strong calls to action, and friction-free user journeys. Every section is designed to help potential customers take the next step quickly.",
+    id: "landing-pages",
     title: "High-Converting Landing Pages",
-    focus: "Fast lead capture",
     description:
-      "Turn visitors into leads with focused landing pages built around clear messaging, strong calls to action, and friction-free user journeys. Every section is designed to help potential customers take the next step quickly.",
+      "Focused landing pages designed to turn local traffic into calls, enquiries, and qualified leads.",
+    href: "/services#landing-pages",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -28,10 +33,15 @@ const services = [
     ),
   },
   {
-    title: "Complete 5-Page Websites",
-    focus: "SEO optimized, custom responsive design",
+    // title: "Complete 5-Page Websites",
+    // focus: "SEO optimized, custom responsive design",
+    // description:
+    //   "Build a professional online presence with a custom website that looks polished across phones, tablets, and desktops. SEO-focused structure helps search engines understand your business while giving customers a clear path to contact you.",
+     id: "websites",
+    title: "Complete 5-Page Converting Websites",
     description:
-      "Build a professional online presence with a custom website that looks polished across phones, tablets, and desktops. SEO-focused structure helps search engines understand your business while giving customers a clear path to contact you.",
+      "Professional, conversion-focused websites built to establish trust and generate consistent local business enquiries.",
+    href: "/services#websites",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -56,10 +66,15 @@ const services = [
     ),
   },
   {
-    title: "Google My Business Optimization",
-    focus: "Continuous ranking & local review management",
+    // title: "Google My Business Optimization",
+    // focus: "Continuous ranking & local review management",
+    // description:
+    //   "Strengthen your local presence so nearby customers can find and trust your business when they search on Google. We continuously improve your profile and support review management to build stronger local visibility.",
+    id: "gmb",
+    title: "Google My Business (GMB) Optimization",
     description:
-      "Strengthen your local presence so nearby customers can find and trust your business when they search on Google. We continuously improve your profile and support review management to build stronger local visibility.",
+      "Strategic Google Business Profile optimization designed to improve local visibility and help customers find your business.",
+    href: "/services#gmb",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -84,10 +99,15 @@ const services = [
     ),
   },
   {
-    title: "Custom AI Automation & Chatbots",
-    focus: "RAG systems, webpage assistants, 24/7 client care",
+    // title: "Custom AI Automation & Chatbots",
+    // focus: "RAG systems, webpage assistants, 24/7 client care",
+    // description:
+    //   "Give your business an intelligent digital assistant that can answer questions, retrieve information, and support customers around the clock. Custom RAG systems and webpage assistants automate repetitive conversations while helping your team focus on higher-value work.",
+    id: "ai-automation",
+    title: "AI Automation & Web Chatbots",
     description:
-      "Give your business an intelligent digital assistant that can answer questions, retrieve information, and support customers around the clock. Custom RAG systems and webpage assistants automate repetitive conversations while helping your team focus on higher-value work.",
+      "Custom AI-powered systems and web chatbots that automate customer interactions and reduce repetitive work.",
+    href: "/services#ai-automation",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -111,6 +131,13 @@ const services = [
       </svg>
     ),
   },
+  { 
+    id: "web-apps",
+    title: "Custom Web Apps & Admin Dashboards",
+    description:
+      "Custom internal portals, client admin dashboards, and operations management software built natively with Next.js.",
+    href: "/services#web-apps",
+   },
 ];
 
 export default function CoreOfferings() {

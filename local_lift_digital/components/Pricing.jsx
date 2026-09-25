@@ -150,7 +150,7 @@ export default function Pricing() {
                   href="/contact"
                   className={`flex w-full items-center justify-center rounded-lg px-6 py-3.5 text-sm font-bold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 ${
                     plan.popular
-                      ? "bg-orange-600 text-white hover:bg-orange-500"
+                      ? "bg-orange-600 text-white hover:bg-[#b63200]"
                       : "bg-slate-950 text-white hover:bg-slate-800"
                   }`}
                 >

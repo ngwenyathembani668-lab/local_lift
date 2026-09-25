@@ -12,7 +12,7 @@
   --border: #334155;
   --accent-color: #ef4500;
   --accent-color-page: #e44200;
-  --accent-color-hover: #d93d00;
+  --accent-color-hover: #b63200;
   --accent-soft: rgba(239, 69, 0, 0.14);
   --accent-ring: rgba(239, 69, 0, 0.38);
   --success: #22c55e;
@@ -115,6 +115,7 @@
   .btn-primary:hover {
     background-color: var(--accent-color-hover);
     border-color: var(--accent-color-hover);
+    color: white;
   }
 
   .btn-primary:focus-visible {

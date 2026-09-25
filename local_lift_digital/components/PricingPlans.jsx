@@ -154,7 +154,7 @@ export default function PricingPlans() {
                   href="/contact"
                   className={`flex w-full items-center justify-center rounded-lg px-5 py-3.5 text-sm font-bold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900 ${
                     tier.popular
-                      ? "bg-[#d73d00] text-white hover:bg-amber-500 hover:shadow-lg"
+                      ? "bg-[#d73d00] text-white hover:bg-[#b63200] hover:shadow-lg"
                       : "border border-white bg-transparent text-white hover:bg-white hover:text-slate-950"
                   }`}
                 >
