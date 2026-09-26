@@ -1,3 +1,6 @@
+import gmb from "../images/Gmbo.png";
+import auto from "../images/automation.png";
+
 const services = [
   {
     id: 1,
@@ -50,6 +53,7 @@ const services = [
     title: "Google My Business Optimization",
     description:
       "Improve your local visibility and make it easier for nearby customers to find your business on Google. We'll help optimize your profile and build practical review strategies that support local discovery.",
+      image: gmb,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -78,6 +82,7 @@ const services = [
     title: "AI Automation & Assistants",
     description:
       "Give your business 24/7 digital support with RAG systems, webpage assistants, and automated social media chatbots. Let AI handle repetitive questions and conversations while your team focuses on higher-value work.",
+      image: auto,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -97,6 +102,44 @@ const services = [
           strokeLinecap="round"
           strokeLinejoin="round"
           d="M9 17.25v3m6-3v3M7.5 20.25h9M8.25 12h.008v.008H8.25V12Zm3.75 0h.008v.008H12V12Zm3.75 0h.008v.008H15.75V12Z"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: 5,
+    title: "Custom Business Applications & Admin Dashboards",
+    description:
+      "Replace spreadsheets and disconnected tools with custom business applications built around the way your company operates. From internal admin dashboards and client portals to booking systems, inventory management, CRM platforms, and operations software, we build scalable applications that centralize your data and streamline your team's workflow.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="h-7 w-7"
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M4.5 5.25A2.25 2.25 0 0 1 6.75 3h10.5a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 17.25 21H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25Z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M4.5 8.25h15"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M8.25 12h2.25v5.25H8.25V12Zm5.25 2.25h2.25v3h-2.25v-3Z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M8.25 19.5h7.5"
         />
       </svg>
     ),

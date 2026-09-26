@@ -31,9 +31,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${inter.variable} ${plusJakartaSans.variable}`}
     >
-      <body className="bg-slate-950 text-white font-sans antialiased">
+      <body
+        suppressHydrationWarning
+        className="bg-slate-950 text-white font-sans antialiased"
+      >
         {children}
 
         <CookieConsent />

@@ -37,7 +37,7 @@ const services = [
     // focus: "SEO optimized, custom responsive design",
     // description:
     //   "Build a professional online presence with a custom website that looks polished across phones, tablets, and desktops. SEO-focused structure helps search engines understand your business while giving customers a clear path to contact you.",
-     id: "websites",
+    id: "websites",
     title: "Complete 5-Page Converting Websites",
     description:
       "Professional, conversion-focused websites built to establish trust and generate consistent local business enquiries.",
@@ -131,13 +131,36 @@ const services = [
       </svg>
     ),
   },
-  { 
+  {
     id: "web-apps",
     title: "Custom Web Apps & Admin Dashboards",
     description:
       "Custom internal portals, client admin dashboards, and operations management software built natively with Next.js.",
     href: "/services#web-apps",
-   },
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-8 w-8 "
+        aria-hidden="true"
+      >
+        <rect x="3" y="3" width="18" height="18" rx="2" />
+        <path d="M3 8h18" />
+        <path d="M7 5.5h.01" />
+        <path d="M10 5.5h.01" />
+        <path d="M13 5.5h.01" />
+        <path d="M7 12h3v5H7z" />
+        <path d="M14 12h3v2h-3z" />
+        <path d="M14 16h3v1h-3z" />
+      </svg>
+    ),
+  },
+ 
 ];
 
 export default function CoreOfferings() {

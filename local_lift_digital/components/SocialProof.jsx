@@ -1,6 +1,6 @@
 export default function SocialProof() {
   const businesses = [
-    "Apex Plumbing",
+    "PM Distribution",
     "Elite Dental",
     "Oak & Iron Construction",
     "Northside Auto",

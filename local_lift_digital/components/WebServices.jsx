@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import team from "../images/team.jpg";
+// import team from "../images/team.jpg";
+import webpage from "../images/webpage.png";
+import convert from "../images/converting-site.png";
+import gmb from "../images/Gmb.png";
 
 const services = [
   {
@@ -13,13 +16,15 @@ const services = [
       "Fast Next.js performance for a smoother experience across desktop and mobile.",
       "Optimized user flows that guide visitors from discovery to enquiry or booking.",
     ],
-    image: "/images/web-designer.jpg",
+    image: webpage,
     imageAlt:
       "Web designer analyzing website layout structures on a monitor",
+    label: "Complete Web Presence",
     linkText: "Learn more about our web builds →",
     linkHref: "/services#websites",
     reverse: false,
   },
+
   {
     id: "landing-pages",
     title: "High-Converting Landing Pages",
@@ -30,16 +35,34 @@ const services = [
       "Focused messaging that removes distractions and gets visitors to act.",
       "Conversion-driven forms and call-to-action sections designed to generate leads.",
     ],
-    image: "/images/marketing-strategist.jpg",
+    image: convert,
     imageAlt:
       "Marketing strategist reviewing a successful analytics dashboard",
+    label: "Campaign Focused",
     linkText: "Explore landing page solutions →",
     linkHref: "/services#landing-pages",
     reverse: true,
   },
+
+  {
+    id: "web-apps",
+    title: "Custom Business Applications & Admin Dashboards",
+    description:
+      "Replace spreadsheets and disconnected tools with custom business software built around the way your company operates. From internal admin dashboards and client portals to booking systems, CRM platforms, inventory tools, and operations software, we build scalable applications that centralize your data and streamline your team's workflow.",
+    benefits: [
+      "Custom internal dashboards that give your team one central place to manage business operations.",
+      "Client portals and business applications built around your specific workflows and requirements.",
+      "Scalable Next.js applications designed to integrate your data, automate processes, and grow with your business.",
+    ],
+    image: gmb,
+    imageAlt:
+      "Business admin dashboard displaying company operations and performance data",
+    label: "Custom Business Software",
+    linkText: "Explore custom application solutions →",
+    linkHref: "/services#web-apps",
+    reverse: false,
+  },
 ];
-
-
 
 export default function WebServices() {
   return (
@@ -50,7 +73,7 @@ export default function WebServices() {
             <article
               key={service.id}
               id={service.id}
-              className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16"
+              className="grid items-center gap-12 scroll-mt-24 lg:grid-cols-2 lg:gap-16"
             >
               {/* Visual */}
               <div
@@ -62,21 +85,25 @@ export default function WebServices() {
                   {/* Main Image */}
                   <div className="relative aspect-4/3 overflow-hidden rounded-xl bg-slate-800">
                     <Image
-                      src={team}
+                      src={
+                        service.image
+                          ? service.image
+                          : team
+                      }
                       alt={service.imageAlt}
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
 
-                    {/* Subtle solid readability layer */}
+                    {/* Subtle readability layer */}
                     <div
                       className="absolute inset-0 bg-slate-950/10"
                       aria-hidden="true"
                     />
                   </div>
 
-                  {/* Web UI Preview */}
+                  {/* Website UI Preview */}
                   {service.id === "websites" && (
                     <div className="absolute bottom-6 left-6 w-[72%] max-w-sm overflow-hidden rounded-xl border border-slate-700 bg-white shadow-2xl sm:bottom-8 sm:left-8">
                       {/* Browser Header */}
@@ -95,8 +122,11 @@ export default function WebServices() {
                       {/* UI Content */}
                       <div className="p-4">
                         <div className="h-2 w-24 rounded bg-slate-200" />
+
                         <div className="mt-3 h-3 w-3/4 rounded bg-slate-800" />
+
                         <div className="mt-2 h-2 w-full rounded bg-slate-200" />
+
                         <div className="mt-1.5 h-2 w-4/5 rounded bg-slate-200" />
 
                         <div className="mt-4 flex gap-2">
@@ -107,7 +137,7 @@ export default function WebServices() {
                     </div>
                   )}
 
-                  {/* Analytics Preview */}
+                  {/* Landing Page Analytics Preview */}
                   {service.id === "landing-pages" && (
                     <div className="absolute bottom-6 right-6 w-[68%] max-w-sm overflow-hidden rounded-xl border border-slate-700 bg-white p-4 shadow-2xl sm:bottom-8 sm:right-8">
                       <div className="flex items-center justify-between">
@@ -139,6 +169,83 @@ export default function WebServices() {
                       </div>
                     </div>
                   )}
+
+                  {/* Admin Dashboard Preview */}
+                  {service.id === "web-apps" && (
+                    <div className="absolute bottom-6 right-6 w-[74%] max-w-sm overflow-hidden rounded-xl border border-slate-700 bg-white shadow-2xl sm:bottom-8 sm:right-8">
+                      {/* Dashboard Header */}
+                      <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
+                        <div>
+                          <p className="text-[8px] font-bold uppercase tracking-wider text-slate-400">
+                            Business Dashboard
+                          </p>
+
+                          <p className="mt-1 text-sm font-bold text-slate-950">
+                            Operations Overview
+                          </p>
+                        </div>
+
+                        <div className="flex h-7 w-7 items-center justify-center rounded-md bg-amber-600/10">
+                          <div className="h-2.5 w-2.5 rounded-full bg-amber-600" />
+                        </div>
+                      </div>
+
+                      {/* Dashboard Metrics */}
+                      <div className="grid grid-cols-2 gap-2 p-3">
+                        <div className="rounded-lg bg-slate-100 p-3">
+                          <p className="text-[8px] font-medium text-slate-400">
+                            Active Clients
+                          </p>
+
+                          <p className="mt-1 text-lg font-extrabold text-slate-950">
+                            128
+                          </p>
+                        </div>
+
+                        <div className="rounded-lg bg-slate-100 p-3">
+                          <p className="text-[8px] font-medium text-slate-400">
+                            Open Tasks
+                          </p>
+
+                          <p className="mt-1 text-lg font-extrabold text-slate-950">
+                            24
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Dashboard Activity */}
+                      <div className="px-3 pb-3">
+                        <div className="rounded-lg border border-slate-200 p-3">
+                          <div className="flex items-center justify-between">
+                            <span className="text-[8px] font-bold text-slate-500">
+                              Recent Activity
+                            </span>
+
+                            <span className="text-[8px] font-semibold text-amber-600">
+                              View all
+                            </span>
+                          </div>
+
+                          <div className="mt-3 space-y-2">
+                            <div className="flex items-center gap-2">
+                              <span className="h-2 w-2 rounded-full bg-amber-600" />
+                              <div className="h-2 flex-1 rounded bg-slate-200" />
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                              <span className="h-2 w-2 rounded-full bg-slate-300" />
+                              <div className="h-2 w-4/5 rounded bg-slate-200" />
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                              <span className="h-2 w-2 rounded-full bg-slate-300" />
+                              <div className="h-2 w-3/5 rounded bg-slate-200" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -148,16 +255,17 @@ export default function WebServices() {
                   service.reverse ? "lg:order-1" : "lg:order-2"
                 }`}
               >
+                {/* Service Label */}
                 <span className="text-sm font-bold uppercase tracking-[0.2em] text-amber-600">
-                  {service.id === "websites"
-                    ? "Complete Web Presence"
-                    : "Campaign Focused"}
+                  {service.label}
                 </span>
 
+                {/* Title */}
                 <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                   {service.title}
                 </h2>
 
+                {/* Description */}
                 <p className="mt-6 text-base leading-8 text-slate-400 sm:text-lg">
                   {service.description}
                 </p>

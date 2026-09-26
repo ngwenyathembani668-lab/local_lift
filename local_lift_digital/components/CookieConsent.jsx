@@ -1,22 +1,48 @@
 "use client";
 
-import { useState } from "react";
+import { useSyncExternalStore } from "react";
 import Link from "next/link";
 
 const COOKIE_CONSENT_KEY = "local_lift_cookie_consent";
 
-export default function CookieConsent() {
-  const [showBanner, setShowBanner] = useState(() => {
-    if (typeof window === "undefined") {
-      return false;
-    }
+function subscribeToCookieConsent(callback) {
+  if (typeof window === "undefined") {
+    return () => {};
+  }
 
-    return !window.localStorage.getItem(COOKIE_CONSENT_KEY);
-  });
+  const handleChange = () => callback();
+
+  window.addEventListener("storage", handleChange);
+  window.addEventListener("cookie-consent-changed", handleChange);
+
+  return () => {
+    window.removeEventListener("storage", handleChange);
+    window.removeEventListener("cookie-consent-changed", handleChange);
+  };
+}
+
+function getCookieConsentSnapshot() {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  return window.localStorage.getItem(COOKIE_CONSENT_KEY) ?? null;
+}
+
+export default function CookieConsent() {
+  const consentValue = useSyncExternalStore(
+    subscribeToCookieConsent,
+    getCookieConsentSnapshot,
+    () => null,
+  );
+
+  const showBanner = consentValue === null;
 
   const handleConsent = (value) => {
-    window.localStorage.setItem(COOKIE_CONSENT_KEY, value);
-    setShowBanner(false);
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(COOKIE_CONSENT_KEY, value);
+      window.dispatchEvent(new CustomEvent("cookie-consent-changed"));
+    }
   };
 
   if (!showBanner) {
@@ -24,8 +50,9 @@ export default function CookieConsent() {
   }
 
   return (
-    <aside
+    <div
       role="dialog"
+      aria-modal="true"
       aria-label="Cookie consent"
       aria-describedby="cookie-consent-description"
       className="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-800 bg-slate-900 p-4 shadow-2xl md:p-6"
@@ -70,6 +97,6 @@ export default function CookieConsent() {
           </button>
         </div>
       </div>
-    </aside>
+    </div>
   );
 }

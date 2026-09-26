@@ -54,11 +54,11 @@ export default function Hero() {
                     alt: "Local Lift Digital team member",
                   },
                   {
-                    src: "/images/team-member-2.jpg",
+                    src: thembani,
                     alt: "Local Lift Digital team member",
                   },
                   {
-                    src: "/images/team-member-3.jpg",
+                    src: thembani,
                     alt: "Local Lift Digital team member",
                   },
                 ].map((avatar, index) => (

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import team from "../images/team.jpg";
+import auto from "../images/automation.png";
+import gmb from "../images/Gmbo.png";
 
 const services = [
   {
@@ -14,7 +15,7 @@ const services = [
       "Review-gathering systems that make it easier for happy customers to leave feedback.",
       "Monthly profile updates that keep your business information fresh and active.",
     ],
-    image: "/images/gmb-specialist.jpg",
+    image: gmb,
     imageAlt:
       "Local Lift Digital team member updating local business listing details on a tablet",
     linkText: "Learn more about GMB optimization →",
@@ -32,7 +33,7 @@ const services = [
       "AI-powered social media assistants that can answer common customer questions.",
       "Automated lead follow-up sequences that help turn enquiries into opportunities.",
     ],
-    image: "/images/ai-developer.jpg",
+    image: auto,
     imageAlt:
       "AI developer configuring an automation workflow diagram on a whiteboard",
     linkText: "Explore AI automation →",
@@ -62,7 +63,7 @@ export default function GrowthServices() {
                   {/* Main Image */}
                   <div className="relative aspect-4/3 overflow-hidden rounded-xl bg-slate-800">
                     <Image
-                      src={team}
+                      src={service.image}
                       alt={service.imageAlt}
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"

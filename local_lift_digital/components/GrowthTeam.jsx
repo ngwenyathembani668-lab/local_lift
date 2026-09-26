@@ -1,5 +1,6 @@
 import Image from "next/image";
 import thembani from "../images/my-image.png";
+import sign from "../images/my-signature.png"
 
 export default function GrowthTeam() {
   return (
@@ -68,7 +69,7 @@ export default function GrowthTeam() {
             </p>
 
             {/* Founder Quote / Signature Callout */}
-            <div className="mt-9 border-l-2 border-accent bg-page px-6 py-6">
+            <div className="bg-[#020617] mt-9 border-l-2 border-accent bg-page px-6 py-6">
               <p className="text-lg font-medium leading-8 text-muted">
                 “We don&#39;t want to be another agency your business has to chase.
                 We want to be the team you know is already taking care of your
@@ -87,11 +88,17 @@ export default function GrowthTeam() {
 
                 {/* Signature Graphic Placeholder */}
                 <div
-                  className="flex h-12 min-w-28 items-center justify-center border-b border-soft px-3"
+                  className="relative flex h-12 min-w-28 items-center justify-center border-b border-soft px-3"
                   aria-label="Founder signature placeholder"
                 >
-                  <span className="font-serif text-xl italic text-muted">
-                    Your Signature
+                  <span className="relative z-10 inline-flex items-center justify-center">
+                    <Image
+                      src={sign}
+                      width={200}
+                      height={30}
+                      alt="Signature"
+                      className="h-auto w-28 sm:w-32 md:w-36 mb-1.5"
+                    />
                   </span>
                 </div>
               </div>
