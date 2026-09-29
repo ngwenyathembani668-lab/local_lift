@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import thembani from "../images/Thembani.jpg";
 
 const articles = [
   {
@@ -10,8 +11,8 @@ const articles = [
     image: "/images/blog-slow-websites.jpg",
     imageAlt:
       "Modern website performance dashboard displaying local business metrics",
-    author: "Devon Miller",
-    authorImage: "/images/devon-miller.jpg",
+    author: "Thembani Ngwenya",
+    authorImage: thembani,
     date: "September 18, 2026",
     href: "/blog/why-slow-websites-cost-small-businesses",
   },
@@ -23,8 +24,8 @@ const articles = [
     image: "/images/blog-ai-assistant.jpg",
     imageAlt:
       "AI automation workflow interface for a local business website",
-    author: "Michael Carter",
-    authorImage: "/images/michael-carter.jpg",
+    author: "Thembani Ngwenya",
+    authorImage: thembani,
     date: "September 12, 2026",
     href: "/blog/custom-ai-assistant-customer-care",
   },
@@ -36,8 +37,8 @@ const articles = [
     image: "/images/blog-landing-pages.jpg",
     imageAlt:
       "High-converting landing page design displayed on a desktop monitor",
-    author: "Sarah Williams",
-    authorImage: "/images/sarah-williams.jpg",
+    author: "Thembani Ngwenya",
+    authorImage: thembani,
     date: "September 5, 2026",
     href: "/blog/landing-page-mistakes",
   },

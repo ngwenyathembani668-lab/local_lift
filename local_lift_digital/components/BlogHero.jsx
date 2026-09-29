@@ -80,7 +80,7 @@ export default function BlogHero() {
                     aria-pressed={isActive}
                     className={`rounded-lg px-4 py-2.5 text-sm font-bold transition-all duration-200 ${
                       isActive
-                        ? "border border-amber-600 bg-[#b55a00] text-white"
+                        ? "border border-amber-600 bg-[#d13d00] text-white"
                         : "border border-slate-700 bg-slate-900 text-slate-300 hover:border-amber-600 hover:text-white"
                     }`}
                   >

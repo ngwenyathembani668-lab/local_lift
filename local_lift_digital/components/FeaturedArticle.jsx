@@ -1,18 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import thembani from "../images/Thembani.jpg";
+import local from "../images/Local-seo.png";
+
 
 export default function FeaturedArticle() {
   return (
+    
     <section className="bg-slate-950">
       <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
         <article className="grid overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 lg:grid-cols-2">
           {/* Image */}
           <Link
-            href="/blog/how-to-optimize-google-my-business-profile-2026"
+            href="/blog/optimize-google-business-profile-in-2026"
             className="group relative block min-h-70 overflow-hidden bg-slate-800 sm:min-h-90 lg:min-h-full"
           >
             <Image
-              src="/images/featured-gmb-strategy.jpg"
+              src={local}
               alt="Modern local business marketing dashboard showing Google Business Profile metrics"
               fill
               priority
@@ -62,7 +66,7 @@ export default function FeaturedArticle() {
             <div className="mt-8 flex items-center gap-3 border-t border-slate-800 pt-6">
               <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-slate-700 bg-slate-800">
                 <Image
-                  src="/images/devon-miller.jpg"
+                  src={thembani}
                   alt="Devon Miller"
                   fill
                   sizes="40px"
@@ -72,7 +76,7 @@ export default function FeaturedArticle() {
 
               <div className="flex flex-col">
                 <span className="text-sm font-bold text-white">
-                  Written by Devon Miller
+                  Written by Thembani Ngwenya
                 </span>
 
                 <span className="mt-0.5 text-xs font-medium text-[#7085a3]">
@@ -84,5 +88,6 @@ export default function FeaturedArticle() {
         </article>
       </div>
     </section>
+
   );
 }
