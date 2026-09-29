@@ -1,13 +1,17 @@
+import pmd from "../../../images/pmd-cover.png";
+import gmbOptimization from "../../../images/Gmbo.png";
+import customWebApp from "../../../images/webpage.png";
+
 export const caseStudies = [
   {
-    slug: "plumbing-website",
+    slug: "marketing-website",
     serviceLabel: "Website Design",
-    businessName: "Local Plumbing & Heating",
-    projectName: "Local Plumbing & Heating",
+    businessName: "Pel Marketing Distribution",
+    projectName: "PMD",
     headline: "Turning Local Search Traffic Into More Qualified Enquiries",
     summary:
       "A conversion-focused website redesign built to turn local search traffic into higher-quality enquiries and make contact easier from mobile devices.",
-    industry: "Home Services",
+    industry: "Marketing Services",
     service: "Website Design",
     projectType: "Conversion-Focused Website",
     timeline: "6 Weeks",
@@ -16,8 +20,8 @@ export const caseStudies = [
     metricValue: "+42%",
     metricLabel: "Conversion Rate",
     heroImage:
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80",
-    websiteHref: "https://example.com",
+      pmd,
+    websiteHref: "https://pmdsit.netlify.app",
     challenge: {
       heading: "The Challenge",
       subheading:
@@ -384,6 +388,214 @@ export const caseStudies = [
       subheading: "Let’s build a digital system designed around your business goals.",
       primaryLabel: "Start Your Project",
       secondaryLabel: "View More Case Studies",
+    },
+  },
+  {
+    slug: "gmb-optimization",
+    serviceLabel: "GMB Optimization",
+    businessName: "Local Home Services Business",
+    projectName: "Google Business Profile Optimization",
+    headline: "Make Local Search Easier to Find and Act On",
+    summary:
+      "A Google Business Profile optimization project focused on accurate business information, clear service details, and a more useful local search presence.",
+    industry: "Home Services",
+    service: "Google Business Profile Optimization",
+    projectType: "Local Search Optimization",
+    timeline: "Ongoing",
+    technology: ["Google Business Profile", "Local SEO", "Review Management"],
+    status: "Service Overview",
+    metricValue: "GBP",
+    metricLabel: "Profile Optimization",
+    heroImage: gmbOptimization,
+    websiteHref: null,
+    challenge: {
+      heading: "The Challenge",
+      subheading:
+        "Local customers need accurate, useful business information at the moment they are ready to choose a provider.",
+      body: [
+        "Incomplete or inconsistent profile information can make it harder for customers to understand what a business offers and where it operates.",
+        "Service details, opening hours, contact options, and profile content need to work together to support local discovery.",
+        "The business needed a clear process for keeping its Google Business Profile accurate and useful over time.",
+      ],
+    },
+    strategy: [
+      {
+        title: "Profile Audit",
+        description:
+          "Review business details, categories, service areas, contact information, and existing profile content for completeness and consistency.",
+      },
+      {
+        title: "Service Clarity",
+        description:
+          "Organize services and descriptions around the work customers are looking for, using clear and accurate language.",
+      },
+      {
+        title: "Local Relevance",
+        description:
+          "Align profile details with the business's real locations and service coverage instead of relying on broad, unsupported claims.",
+      },
+      {
+        title: "Ongoing Maintenance",
+        description:
+          "Establish a practical review process for updates, customer questions, and profile changes as the business evolves.",
+      },
+    ],
+    solution: {
+      heading: "A clearer local business profile",
+      body:
+        "The optimization work centers on giving customers dependable information and straightforward ways to understand and contact the business.",
+      highlights: [
+        "Business information checked for accuracy and consistency",
+        "Services and categories organized around the actual offer",
+        "A repeatable approach for profile updates and customer engagement",
+      ],
+      solutionImage: gmbOptimization,
+    },
+    features: [
+      {
+        title: "Business Information",
+        description:
+          "Core details such as hours, contact information, service areas, and business descriptions are reviewed for accuracy.",
+      },
+      {
+        title: "Service Categories",
+        description:
+          "Categories and service details are selected to represent the work the business genuinely provides.",
+      },
+      {
+        title: "Customer Engagement",
+        description:
+          "Review responses and profile updates support a consistent, attentive presence for prospective customers.",
+      },
+      {
+        title: "Local Search Alignment",
+        description:
+          "Profile content is organized to make the business's services and service area easier to understand in local search.",
+      },
+    ],
+    results: [
+      { value: "Accurate", label: "Business Information" },
+      { value: "Clear", label: "Service Presentation" },
+      { value: "Ongoing", label: "Profile Maintenance" },
+    ],
+    gallery: [
+      {
+        src: gmbOptimization,
+        alt: "Google Business Profile optimization work",
+      },
+    ],
+    finalSummary:
+      "A well-maintained Google Business Profile gives local customers a clearer view of a business's services, location, and contact options. The work prioritizes accuracy, relevance, and a sustainable update process.",
+    cta: {
+      heading: "Ready to Improve Your Local Presence?",
+      subheading:
+        "Build a Google Business Profile that clearly represents your business and the customers you serve.",
+      primaryLabel: "Discuss Your Profile",
+      secondaryLabel: "View More Projects",
+    },
+  },
+  {
+    slug: "custom-web-apps",
+    serviceLabel: "Custom Web Apps",
+    businessName: "Growing Service Business",
+    projectName: "Custom Business Web Application",
+    headline: "Turn a Business Workflow Into a Useful Web App",
+    summary:
+      "A custom web application project shaped around real business workflows, bringing essential information and actions into a responsive, purpose-built interface.",
+    industry: "Professional Services",
+    service: "Custom Web Application Development",
+    projectType: "Business Web Application",
+    timeline: "Scoped to Requirements",
+    technology: ["Next.js", "React", "Firebase"],
+    status: "Service Overview",
+    metricValue: "Custom",
+    metricLabel: "Web Application Build",
+    heroImage: customWebApp,
+    websiteHref: null,
+    challenge: {
+      heading: "The Challenge",
+      subheading:
+        "Off-the-shelf tools do not always fit the way a business actually works.",
+      body: [
+        "Teams can end up tracking important work across disconnected tools, repeated manual steps, or interfaces that do not match their process.",
+        "A useful application needs to make frequent tasks straightforward without forcing the team into unnecessary complexity.",
+        "The goal is to understand the workflow first, then build a focused digital product that can adapt as the business grows.",
+      ],
+    },
+    strategy: [
+      {
+        title: "Workflow Discovery",
+        description:
+          "Map the users, decisions, and recurring tasks the application needs to support before choosing features or architecture.",
+      },
+      {
+        title: "Focused Product Scope",
+        description:
+          "Prioritize the essential workflows so the first version solves a clear problem and remains straightforward to use.",
+      },
+      {
+        title: "Interface Design",
+        description:
+          "Structure screens around the information users need and the actions they take most often.",
+      },
+      {
+        title: "Scalable Implementation",
+        description:
+          "Build a responsive application with a technical foundation that can support future improvements and integrations.",
+      },
+    ],
+    solution: {
+      heading: "An application built around your process",
+      body:
+        "Custom web applications connect a business's requirements to a focused interface, replacing generic flows with tools shaped for the people using them.",
+      highlights: [
+        "User journeys and requirements defined before development",
+        "Core workflows presented in a clear, responsive interface",
+        "A flexible application foundation for future features",
+      ],
+      solutionImage: customWebApp,
+    },
+    features: [
+      {
+        title: "Purpose-Built Workflows",
+        description:
+          "Application flows reflect the team's real tasks and handoffs rather than a one-size-fits-all template.",
+      },
+      {
+        title: "Responsive Interface",
+        description:
+          "A considered layout keeps key information and actions accessible across desktop, tablet, and mobile screens.",
+      },
+      {
+        title: "Connected Data",
+        description:
+          "Data and service integrations can be planned around the application requirements and existing tools.",
+      },
+      {
+        title: "Room to Evolve",
+        description:
+          "A modular foundation makes it easier to extend the product as workflows and user needs change.",
+      },
+    ],
+    results: [
+      { value: "Focused", label: "Workflow Design" },
+      { value: "Purpose-Built", label: "User Experience" },
+      { value: "Flexible", label: "Technical Foundation" },
+    ],
+    gallery: [
+      {
+        src: customWebApp,
+        alt: "Custom web application interface preview",
+      },
+    ],
+    finalSummary:
+      "A custom web application starts with the workflow it needs to support. By keeping the scope focused and the interface clear, the product can address today's needs while leaving space for future capabilities.",
+    cta: {
+      heading: "Have a Workflow Worth Improving?",
+      subheading:
+        "Let's map your requirements and shape them into a practical custom web application.",
+      primaryLabel: "Discuss Your App",
+      secondaryLabel: "View More Projects",
     },
   },
 ];

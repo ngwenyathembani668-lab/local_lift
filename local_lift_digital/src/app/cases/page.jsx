@@ -4,6 +4,8 @@ import Footer from "../../../components/Footer";
 
 import CasesReviewsClient from "./CasesReviewsClient";
 import Image from "next/image";
+import gmbOptimization from "../../../images/Gmbo.png";
+import customWebApp from "../../../images/webpage.png";
 
 export const metadata = {
   title: "Proven Local Growth & Client Reviews | Local Lift Digital",
@@ -58,26 +60,65 @@ export const metadata = {
 //   },
 // ];
 
+import pmd from "../../../images/pmd-cover.png";
+
 const caseStudies = [
   {
-    id: "plumbing-website",
-    businessName: "Local Plumbing & Heating",
+    id: "gmb-optimization",
+    businessName: "Local Home Services Business",
     industry: "Home Services",
+    service: "GMB Optimization",
+    image: gmbOptimization,
+    imageAlt: "Google Business Profile optimization project preview",
+    metric: "GBP",
+    metricLabel: "Profile Optimization",
+    description:
+      "A local search project focused on building a complete, consistent Google Business Profile that helps nearby customers find and evaluate the business.",
+    results: [
+      "Business details and service categories reviewed",
+      "Service descriptions aligned with local search intent",
+      "Profile content and customer actions organized",
+    ],
+    caseStudyHref: "/cases/gmb-optimization",
+    websiteHref: null,
+  },
+  {
+    id: "custom-web-apps",
+    businessName: "Growing Service Business",
+    industry: "Professional Services",
+    service: "Custom Web Apps",
+    image: customWebApp,
+    imageAlt: "Custom web application project interface preview",
+    metric: "Custom",
+    metricLabel: "Web Application Build",
+    description:
+      "A tailored web application concept designed around business workflows, with a clear interface and room to grow as operational needs change.",
+    results: [
+      "Workflow requirements mapped to a focused interface",
+      "Core information and actions brought into one experience",
+      "Responsive layout designed for everyday use",
+    ],
+    caseStudyHref: "/cases/custom-web-apps",
+    websiteHref: null,
+  },
+  {
+    id: "pmd-website",
+    businessName: "Pel Marketing Distribution",
+    industry: "Marketing Services",
     service: "Website Design",
-    image: "/images/case-plumbing.jpg",
-    imageAlt:
-      "Modern website design created for a local plumbing and heating business",
+    image: pmd,
+    imageAlt: "Pel Marketing Distribution website redesign cover page",
     metric: "+42%",
     metricLabel: "Conversion Rate",
     description:
-      "A conversion-focused website redesign built to turn local search traffic into qualified enquiries.",
+      "A conversion-focused website redesign built to turn local search traffic into qualified enquiries and improve contact flow on mobile.",
     results: [
       "Clearer service positioning",
       "Improved mobile conversion flow",
       "Stronger enquiry calls-to-action",
     ],
-    caseStudyHref: "/cases/plumbing-website",
-    websiteHref: "https://example.com",
+    caseStudyHref: "/cases/pmd",
+    websiteHref: "https://pmdsit.netlify.app",
   },
   {
     id: "medical-practice",
