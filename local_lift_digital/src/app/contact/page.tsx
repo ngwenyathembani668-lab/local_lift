@@ -1,9 +1,10 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contact Our Growth Team | Local Lift Digital",
   description:
     "Get in touch with Local Lift Digital. Book a consultation or request a custom digital growth and AI automation audit for your local business.",
@@ -127,27 +128,27 @@ export default function ContactPage() {
               </div>
 
               <form
-                name="contact-page"
+                name="agency-contact"
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                action="/contact?success=true"
+                action="/contact/success"
                 className="space-y-6"
               >
                 {/* Netlify Form Identification */}
-                <input
-                  type="hidden"
-                  name="form-name"
-                  value="contact-page"
-                />
+                <input type="hidden" name="form-name" value="agency-contact" />
 
                 {/* Netlify Honeypot */}
-                <p className="hidden">
-                  <label>
-                    Don&apos;t fill this out if you&apos;re human:
-                    <input name="bot-field" />
-                  </label>
-                </p>
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="bot-field">bot-field</label>
+                  <input
+                    id="bot-field"
+                    name="bot-field"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
 
                 {/* Full Name */}
                 <div>
@@ -160,12 +161,12 @@ export default function ContactPage() {
 
                   <input
                     id="full-name"
-                    name="fullName"
+                    name="full-name"
                     type="text"
                     autoComplete="name"
                     required
                     placeholder="Your full name"
-                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
                   />
                 </div>
 
@@ -180,32 +181,32 @@ export default function ContactPage() {
 
                   <input
                     id="business-name"
-                    name="businessName"
+                    name="business-name"
                     type="text"
                     autoComplete="organization"
                     required
                     placeholder="Your business name"
-                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
                   />
                 </div>
 
                 {/* Email */}
                 <div>
                   <label
-                    htmlFor="email"
+                    htmlFor="email-address"
                     className="mb-2 block text-sm font-semibold text-white"
                   >
                     Email Address
                   </label>
 
                   <input
-                    id="email"
-                    name="email"
+                    id="email-address"
+                    name="email-address"
                     type="email"
                     autoComplete="email"
                     required
                     placeholder="you@yourbusiness.com"
-                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
                   />
                 </div>
 
@@ -220,62 +221,49 @@ export default function ContactPage() {
 
                   <input
                     id="phone"
-                    name="phone"
+                    name="phone-number"
                     type="tel"
                     autoComplete="tel"
                     placeholder="+27 00 000 0000"
-                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
                   />
                 </div>
 
-                {/* Primary Interest */}
+                {/* Service Needed */}
                 <div>
                   <label
-                    htmlFor="primary-interest"
+                    htmlFor="service-needed"
                     className="mb-2 block text-sm font-semibold text-white"
                   >
-                    Primary Interest
+                    Service Needed
                   </label>
 
                   <select
-                    id="primary-interest"
-                    name="primaryInterest"
+                    id="service-needed"
+                    name="service-needed"
                     required
                     defaultValue=""
-                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
                   >
                     <option value="" disabled>
-                      Select an option
+                      Select a service
                     </option>
-                    <option value="Websites">Websites</option>
-                    <option value="GMB">GMB</option>
+                    <option value="Website Design">Website Design</option>
+                    <option value="Google Business Profile">
+                      Google Business Profile
+                    </option>
                     <option value="AI Automation">AI Automation</option>
+                    <option value="Custom Business Applications">
+                      Custom Business Applications
+                    </option>
+                    <option value="Other">Other</option>
                   </select>
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="mb-2 block text-sm font-semibold text-white"
-                  >
-                    Tell us about your current business goals...
-                  </label>
-
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    required
-                    placeholder="Tell us what you're trying to improve, what you've already tried, and what you'd like to achieve."
-                    className="w-full resize-y border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
-                  />
                 </div>
 
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full bg-[#d73d00] px-6 py-4 text-sm font-bold text-white transition-colors hover:bg-[#b63200] focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
+                  className="w-full bg-amber-600 px-6 py-4 text-sm font-bold text-white transition-colors hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
                 >
                   Send Message &amp; Request Audit
                 </button>
