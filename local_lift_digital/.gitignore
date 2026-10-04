@@ -42,3 +42,8 @@ next-env.d.ts
 
 .env.local
 .env*.local
+
+.next/
+.netlify/
+out/
+build/
