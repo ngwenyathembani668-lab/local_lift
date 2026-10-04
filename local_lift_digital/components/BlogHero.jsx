@@ -119,7 +119,7 @@ export default function BlogHero() {
 
                   return (
                     <button
-                      key={category}
+                      key={category} 
                       type="button"
                       onClick={() => handleCategoryChange(category)}
                       aria-pressed={isActive}
