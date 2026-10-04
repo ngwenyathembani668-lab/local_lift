@@ -1,17 +1,7 @@
 [build]
   base = "local_lift_digital"
   command = "npm run build"
-  publish = ".next"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+  publish = "local_lift_digital/.next"
 
 [secrets_scanning]
-  omit_keys = [
-    "NEXT_PUBLIC_FIREBASE_API_KEY",
-    "NEXT_PUBLIC_FIREBASE_APP_ID",
-    "NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET"
-  ]
-
-  [build.environment]
-  SECRETS_SCAN_OMIT_PATHS = ".netlify/.next/cache"
+  omit_keys = ["NEXT_PUBLIC_FIREBASE_API_KEY", "NEXT_PUBLIC_FIREBASE_APP_ID"]
