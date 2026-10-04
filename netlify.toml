@@ -1,7 +1,7 @@
 [build]
   base = "local_lift_digital"
   command = "npm run build"
-  publish = "local_lift_digital/.next"
+  publish = ".next"
 
 [secrets_scanning]
   omit_keys = ["NEXT_PUBLIC_FIREBASE_API_KEY", "NEXT_PUBLIC_FIREBASE_APP_ID"]
