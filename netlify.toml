@@ -1,7 +1,10 @@
 [build]
   base = "local_lift_digital"
   command = "npm run build"
-  publish = "local_lift_digital/.next"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [secrets_scanning]
   omit_keys = [
