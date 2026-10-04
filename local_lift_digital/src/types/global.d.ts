@@ -4,7 +4,7 @@ interface GoogleConsentUpdate {
   ad_storage: GoogleConsentValue;
   analytics_storage: GoogleConsentValue;
   ad_user_data: GoogleConsentValue;
-  ad_personalization: GoogleConsentValue;
+  ad_personalization: GoogleConsentValue; 
 }
 
 type GoogleTag = {
