@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 import CookieConsent from "../../components/CookieConsent";
+
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 // Native optimization for your brand fonts
 const inter = Inter({
@@ -38,6 +41,19 @@ export default function RootLayout({
         suppressHydrationWarning
         className="bg-slate-950 text-white font-sans antialiased"
       >
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'analytics_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied'
+});`,
+          }}
+        />
+        {gaMeasurementId ? <GoogleAnalytics gaId={gaMeasurementId} /> : null}
         {children}
 
         <CookieConsent />

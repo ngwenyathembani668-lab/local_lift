@@ -5,7 +5,10 @@ import Link from "next/link";
 
 const COOKIE_CONSENT_KEY = "local_lift_cookie_consent";
 
-function subscribeToCookieConsent(callback) {
+type ConsentPreference = "accepted" | "declined";
+type ConsentValue = "granted" | "denied";
+
+function subscribeToCookieConsent(callback: () => void) {
   if (typeof window === "undefined") {
     return () => {};
   }
@@ -21,12 +24,15 @@ function subscribeToCookieConsent(callback) {
   };
 }
 
-function getCookieConsentSnapshot() {
+function getCookieConsentSnapshot(): ConsentPreference | null {
   if (typeof window === "undefined") {
     return null;
   }
 
-  return window.localStorage.getItem(COOKIE_CONSENT_KEY) ?? null;
+  const preference = window.localStorage.getItem(COOKIE_CONSENT_KEY);
+  return preference === "accepted" || preference === "declined"
+    ? preference
+    : null;
 }
 
 export default function CookieConsent() {
@@ -38,9 +44,21 @@ export default function CookieConsent() {
 
   const showBanner = consentValue === null;
 
-  const handleConsent = (value) => {
+  const saveConsent = (preference: ConsentPreference) => {
     if (typeof window !== "undefined") {
-      window.localStorage.setItem(COOKIE_CONSENT_KEY, value);
+      const consentValue: ConsentValue =
+        preference === "accepted" ? "granted" : "denied";
+
+      if (window.gtag) {
+        window.gtag("consent", "update", {
+          ad_storage: consentValue,
+          analytics_storage: consentValue,
+          ad_user_data: consentValue,
+          ad_personalization: consentValue,
+        });
+      }
+
+      window.localStorage.setItem(COOKIE_CONSENT_KEY, preference);
       window.dispatchEvent(new CustomEvent("cookie-consent-changed"));
     }
   };
@@ -82,7 +100,7 @@ export default function CookieConsent() {
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
           <button
             type="button"
-            onClick={() => handleConsent("declined")}
+            onClick={() => saveConsent("declined")}
             className="rounded border border-slate-700 px-4 py-2 text-xs font-semibold text-slate-300 transition hover:border-amber-600 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
           >
             Decline
@@ -90,8 +108,8 @@ export default function CookieConsent() {
 
           <button
             type="button"
-            onClick={() => handleConsent("accepted")}
-            className="rounded bg-[#d13d00] px-5 py-2 text-xs font-semibold text-white transition hover:bg-[#b63200] focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
+            onClick={() => saveConsent("accepted")}
+            className="rounded bg-amber-600 px-5 py-2 text-xs font-semibold text-white transition hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
           >
             Accept All
           </button>
