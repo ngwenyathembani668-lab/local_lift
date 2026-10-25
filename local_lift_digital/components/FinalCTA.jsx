@@ -32,7 +32,7 @@ export default function FinalCTA() {
           {/* Intake Form */}
           <div className="border-t border-soft bg-page p-8 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
             <form
-              netlify="true"
+              
               name="homepage-lead"
               method="POST"
               action="/contact/success"
