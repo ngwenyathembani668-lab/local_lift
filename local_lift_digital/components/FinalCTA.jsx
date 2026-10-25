@@ -32,9 +32,10 @@ export default function FinalCTA() {
           {/* Intake Form */}
           <div className="border-t border-soft bg-page p-8 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
             <form
+              netlify="true"
               name="homepage-lead"
               method="POST"
-              action="/success"
+              action="/contact/success"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               className="space-y-5"
@@ -150,6 +151,8 @@ export default function FinalCTA() {
                   <option value="New Website">New Website</option>
                   <option value="GMB Growth">GMB Growth</option>
                   <option value="AI Assistants">AI Assistants</option>
+                  <option value="Custom">Custom Web App</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
@@ -162,14 +165,14 @@ export default function FinalCTA() {
 
               {/* Human Element */}
               <div className="flex items-center justify-center gap-3 pt-1">
-                <div className="h-8 w-8 overflow-hidden rounded-full border border-soft bg-surface">
+                <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-soft bg-surface">
                   <Image
-                  src={thembani}
-                  width={800}
-                  height={600}
-                  alt="Sarah, Lead Coordinator"
-                  className="h-full w-full object-cover"
-                />
+                    src={thembani}
+                    alt="Sarah, Lead Coordinator"
+                    fill
+                    sizes="32px"
+                    className="object-cover"
+                  />
                 </div>
 
                 <p className="text-xs font-medium text-soft">

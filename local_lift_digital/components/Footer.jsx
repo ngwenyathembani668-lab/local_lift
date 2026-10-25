@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import team from "../images/team.jpg";
+import team from "../images/Thembani.jpg";
 
 const companyLinks = [
   { label: "Home", href: "/" },

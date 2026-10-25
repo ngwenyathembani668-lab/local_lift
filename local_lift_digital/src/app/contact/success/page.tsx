@@ -48,8 +48,8 @@ export default function ContactSuccessPage() {
         <p className="mt-5 text-base leading-7 text-slate-300">
           Thank you for reaching out to Local Lift Digital. Our strategy team
           has received your operational details and we are running your local
-          maps and design diagnostic right now. Check your inbox for your
-          confirmation receipt.
+          maps and design diagnostic right now. We will follow up using the
+          contact details you provided.
         </p>
 
         <div className="mt-8 flex items-center gap-4 border-t border-slate-800 pt-6">
@@ -59,7 +59,7 @@ export default function ContactSuccessPage() {
               aria-label="Sarah, lead coordinator"
               className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-950 text-sm font-semibold text-white"
             >
-              S
+              TN
             </div>
             <span
               aria-label="Online"
@@ -68,13 +68,13 @@ export default function ContactSuccessPage() {
           </div>
 
           <p className="text-sm font-medium leading-6 text-white">
-            Sarah has queued your site for manual analysis.
+            Thembani has queued your site for manual analysis.
           </p>
         </div>
 
         <Link
           href="/"
-          className="mt-8 inline-flex items-center justify-center bg-amber-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
+          className="mt-8 inline-flex items-center justify-center bg-[#d13d00] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#b63200] focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
         >
           Return to Homepage
         </Link>

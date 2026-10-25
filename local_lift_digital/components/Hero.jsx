@@ -53,14 +53,14 @@ export default function Hero() {
                     src: thembani,
                     alt: "Local Lift Digital team member",
                   },
-                  {
-                    src: thembani,
-                    alt: "Local Lift Digital team member",
-                  },
-                  {
-                    src: thembani,
-                    alt: "Local Lift Digital team member",
-                  },
+                  // {
+                  //   src: thembani,
+                  //   alt: "Local Lift Digital team member",
+                  // },
+                  // {
+                  //   src: thembani,
+                  //   alt: "Local Lift Digital team member",
+                  // },
                 ].map((avatar, index) => (
                   <div
                     key={`${avatar.alt}-${index}`}
@@ -69,10 +69,10 @@ export default function Hero() {
                   >
                     <Image
                       src={avatar.src}
-                      width={44}
-                      height={44}
                       alt={avatar.alt}
-                      className="h-11 w-11 object-cover"
+                      fill
+                      sizes="44px"
+                      className="object-cover"
                     />
                   </div>
                 ))}
