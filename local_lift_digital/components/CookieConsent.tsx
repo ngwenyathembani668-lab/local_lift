@@ -109,7 +109,7 @@ export default function CookieConsent() {
           <button
             type="button"
             onClick={() => saveConsent("accepted")}
-            className="rounded bg-amber-600 px-5 py-2 text-xs font-semibold text-white transition hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
+            className="rounded bg-[#d13d00] px-5 py-2 text-xs font-semibold text-white transition hover:bg-[#b63200] focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
           >
             Accept All
           </button>
