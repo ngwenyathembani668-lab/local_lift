@@ -51,11 +51,8 @@ export default function ContactSuccessPage() {
           up using the contact details you provided.
         </p>
 
-        <ol
-          aria-label="What happens next"
-          className="mt-8 space-y-4"
-        >
-          <li className="rounded-xl border border-slate-800 bg-slate-950 p-5">
+        <ol aria-label="What happens next" className="mt-8 space-y-4">
+          <li className="rounded-xl border border-slate-800 bg-slate-900 p-5">
             <div className="flex items-start gap-4">
               <span
                 aria-hidden="true"
@@ -65,21 +62,21 @@ export default function ContactSuccessPage() {
               </span>
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#d13d00]">
-                  Immediate
+                  Step 1 <span className="text-slate-400">| Immediate</span>
                 </p>
                 <h2 className="mt-1 text-lg font-semibold text-white">
-                  Secure Data Pipeline Setup
+                  Secure Intake
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-slate-300">
-                  Your business details are submitted to our Firestore database.
-                  Access to that data is governed by our database security
-                  rules.
+                  Your business parameters are securely logged into our local
+                  agency database database. A tracking ticket has been opened
+                  under your business name.
                 </p>
               </div>
             </div>
           </li>
 
-          <li className="rounded-xl border border-slate-800 bg-slate-950 p-5">
+          <li className="rounded-xl border border-slate-800 bg-slate-900 p-5">
             <div className="flex items-start gap-4">
               <span
                 aria-hidden="true"
@@ -89,22 +86,22 @@ export default function ContactSuccessPage() {
               </span>
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#d13d00]">
-                  Within 2 Hours
+                  Step 2 <span className="text-slate-400">| Within 2 Hours</span>
                 </p>
                 <h2 className="mt-1 text-lg font-semibold text-white">
-                  Manual Visibility Diagnostics
+                  Asset Verification &amp; Diagnostic
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-slate-300">
-                  Thembani manually evaluates your Google Maps 3-pack profile
-                  tracking, runs core web performance speed audits, and records
-                  a 5-minute screencast report highlighting hidden optimization
-                  opportunities.
+                  Thembani scans Google &amp; Apple Maps to audit your live local
+                  rankings. If you requested a Converting Website or Custom Web
+                  App, our software engineering desk begins mapping your system
+                  logic, database layouts, or custom portals.
                 </p>
               </div>
             </div>
           </li>
 
-          <li className="rounded-xl border border-slate-800 bg-slate-950 p-5">
+          <li className="rounded-xl border border-slate-800 bg-slate-900 p-5">
             <div className="flex items-start gap-4">
               <span
                 aria-hidden="true"
@@ -114,15 +111,16 @@ export default function ContactSuccessPage() {
               </span>
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#d13d00]">
-                  Delivery Window
+                  Step 3 <span className="text-slate-400">| Discovery Window</span>
                 </p>
                 <h2 className="mt-1 text-lg font-semibold text-white">
-                  Strategic Report Handoff
+                  Direct Consultation Call
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-slate-300">
-                  We&apos;ll send the direct video report link to your text
-                  message or email inbox, along with an actionable roadmap
-                  checklist.
+                  We will call your provided number directly to discuss the
+                  audit. If you have active profiles, we drop a 5-minute video
+                  breakdown. If you lack a website or app, we will run you
+                  through a clean structural blueprint over the phone.
                 </p>
               </div>
             </div>

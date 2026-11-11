@@ -21,6 +21,7 @@ export default function FinalCTA() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitError("");
+    let leadWasSaved = false;
 
     try {
       await addDoc(collection(db, "leads"), {
@@ -32,12 +33,25 @@ export default function FinalCTA() {
         submittedAt: new Date(),
         formOrigin: "homepage-lead",
       });
+      leadWasSaved = true;
+
+      const emailResponse = await fetch("/api/leads/confirmation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fullName, businessName, email }),
+      });
+
+      if (!emailResponse.ok) {
+        throw new Error("The confirmation email could not be sent.");
+      }
 
       router.push("/contact/success");
     } catch (error) {
       console.error("Homepage lead submission error:", error);
       setSubmitError(
-        "We couldn't submit your request. Please try again in a moment.",
+        leadWasSaved
+          ? "Your request was received, but we couldn't send the confirmation email. Please contact us if you need assistance."
+          : "We couldn't submit your request. Please try again in a moment.",
       );
     } finally {
       setIsSubmitting(false);
@@ -45,9 +59,9 @@ export default function FinalCTA() {
   }
 
   return (
-    <section className="bg-page px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
+    <section className="bg-slate-950 px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-6xl">
-        <div className="grid overflow-hidden rounded-2xl border border-slate-700 bg-surface lg:grid-cols-2">
+        <div className="grid overflow-hidden rounded-2xl border border-slate-700 bg-slate-900 lg:grid-cols-2">
           <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-14">
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-amber-600">
               Start Growing
@@ -70,7 +84,7 @@ export default function FinalCTA() {
             </div>
           </div>
 
-          <div className="border-t border-soft bg-page p-8 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
+          <div className="border-t border-soft bg-slate-900 p-8 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
@@ -190,13 +204,13 @@ export default function FinalCTA() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full rounded-lg bg-amber-600 px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-amber-700 disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
+                className="w-full rounded-lg bg-[#d13d00] px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-[#b63200] disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950"
               >
                 {isSubmitting ? "Processing Audit..." : "Claim Your Free Audit"}
               </button>
 
               <div className="flex items-center justify-center gap-3 pt-1">
-                <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-soft bg-surface">
+                <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-soft bg-slate-900">
                   <Image
                     src={thembani}
                     alt="Thembani, Lead Coordinator"
