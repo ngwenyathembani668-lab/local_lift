@@ -21,7 +21,6 @@ export default function FinalCTA() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitError("");
-    let leadWasSaved = false;
 
     try {
       await addDoc(collection(db, "leads"), {
@@ -33,25 +32,12 @@ export default function FinalCTA() {
         submittedAt: new Date(),
         formOrigin: "homepage-lead",
       });
-      leadWasSaved = true;
-
-      const emailResponse = await fetch("/api/leads/confirmation", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fullName, businessName, email }),
-      });
-
-      if (!emailResponse.ok) {
-        throw new Error("The confirmation email could not be sent.");
-      }
 
       router.push("/contact/success");
     } catch (error) {
       console.error("Homepage lead submission error:", error);
       setSubmitError(
-        leadWasSaved
-          ? "Your request was received, but we couldn't send the confirmation email. Please contact us if you need assistance."
-          : "We couldn't submit your request. Please try again in a moment.",
+        "We couldn't submit your request. Please try again in a moment.",
       );
     } finally {
       setIsSubmitting(false);
