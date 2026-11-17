@@ -19,7 +19,7 @@ const services = [
     imageAlt:
       "Local Lift Digital team member updating local business listing details on a tablet",
     linkText: "Learn more about GMB optimization →",
-    linkHref: "/services#gmb",
+    linkHref: "/cases#case-studies",
     reverse: false,
   },
   {
@@ -37,7 +37,7 @@ const services = [
     imageAlt:
       "AI developer configuring an automation workflow diagram on a whiteboard",
     linkText: "Explore AI automation →",
-    linkHref: "/services#ai-automation",
+    linkHref: "/cases#case-studies",
     reverse: true,
   },
 ];
@@ -61,7 +61,7 @@ export default function GrowthServices() {
               >
                 <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 p-3 shadow-2xl">
                   {/* Main Image */}
-                  <div className="relative aspect-4/3 overflow-hidden rounded-xl bg-slate-800">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-slate-800">
                     <Image
                       src={service.image}
                       alt={service.imageAlt}
@@ -77,133 +77,10 @@ export default function GrowthServices() {
                   </div>
 
                   {/* GMB 3-Pack Mockup */}
-                  {service.id === "gmb" && (
-                    <div className="absolute bottom-6 left-6 w-[78%] max-w-sm overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl sm:bottom-8 sm:left-8">
-                      {/* Maps Header */}
-                      <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
-                        <div>
-                          <p className="text-[8px] font-bold uppercase tracking-wider text-[#677385]">
-                            Local Search
-                          </p>
-
-                          <p className="mt-1 text-xs font-extrabold text-slate-900">
-                            Top local results
-                          </p>
-                        </div>
-
-                        <span className="rounded-md bg-[#b55a00] px-2 py-1 text-[8px] font-bold text-white">
-                          Maps
-                        </span>
-                      </div>
-
-                      {/* Results */}
-                      <div className="space-y-2 p-3">
-                        {[
-                          {
-                            rank: "1",
-                            name: "Local Business Co.",
-                            rating: "4.9",
-                          },
-                          {
-                            rank: "2",
-                            name: "City Services",
-                            rating: "4.8",
-                          },
-                          {
-                            rank: "3",
-                            name: "Your Local Experts",
-                            rating: "4.7",
-                          },
-                        ].map((business) => (
-                          <div
-                            key={business.rank}
-                            className="flex items-center gap-2.5 rounded-lg border border-slate-100 bg-slate-50 px-2.5 py-2"
-                          >
-                            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-600 text-[8px] font-bold text-white">
-                              {business.rank}
-                            </span>
-
-                            <div className="min-w-0 flex-1">
-                              <p className="truncate text-[9px] font-bold text-slate-900">
-                                {business.name}
-                              </p>
-
-                              <p className="mt-0.5 text-[8px] text-[#677385]">
-                                ★ {business.rating} · Local business
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                  
 
                   {/* AI Workflow Mockup */}
-                  {service.id === "ai-automation" && (
-                    <div className="absolute bottom-6 right-6 w-[76%] max-w-sm rounded-xl border border-slate-700 bg-white p-4 shadow-2xl sm:bottom-8 sm:right-8">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-[8px] font-bold uppercase tracking-wider text-[#677385]">
-                            AI Workflow
-                          </p>
-
-                          <p className="mt-1 text-xs font-extrabold text-slate-900">
-                            Lead Automation
-                          </p>
-                        </div>
-
-                        <span className="flex items-center gap-1.5 text-[8px] font-bold text-[#008256]">
-                          <span className="h-1.5 w-1.5 rounded-full bg-[#008256]" />
-                          Active
-                        </span>
-                      </div>
-
-                      <div className="mt-4 space-y-2">
-                        {/* Trigger */}
-                        <div className="flex items-center gap-2">
-                          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-slate-100 text-[9px] font-bold text-slate-600">
-                            01
-                          </div>
-
-                          <div className="flex-1 rounded-md border border-slate-200 px-3 py-2">
-                            <p className="text-[8px] font-bold text-slate-800">
-                              New enquiry received
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="ml-3 h-3 w-px bg-slate-200" />
-
-                        {/* AI */}
-                        <div className="flex items-center gap-2">
-                          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-[#b55a00] text-[9px] font-bold text-white">
-                            AI
-                          </div>
-
-                          <div className="flex-1 rounded-md border border-amber-600/30 bg-amber-600/5 px-3 py-2">
-                            <p className="text-[8px] font-bold text-slate-800">
-                              AI qualifies lead
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="ml-3 h-3 w-px bg-slate-200" />
-
-                        {/* Follow-up */}
-                        <div className="flex items-center gap-2">
-                          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-slate-100 text-[9px] font-bold text-slate-600">
-                            03
-                          </div>
-
-                          <div className="flex-1 rounded-md border border-slate-200 px-3 py-2">
-                            <p className="text-[8px] font-bold text-slate-800">
-                              Automated follow-up
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
+                  
                 </div>
               </div>
 

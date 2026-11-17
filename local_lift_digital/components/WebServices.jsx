@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 // import team from "../images/team.jpg";
-import webpage from "../images/webpage.png";
+import webpage from "../images/Apex Flow Plumbing Hero Mockup.png";
 import convert from "../images/converting-site.png";
-import gmb from "../images/Gmb.png";
+// import gmb from "../images/Gmb.png";
+import dashBoard from "../images/Local Lift Digital Dashboard.png";
 
 const services = [
   {
     id: "websites",
-    title: "5-Page Converting Websites",
+    title: "5-8 Page Converting Websites",
     description:
       "Get more than a collection of pages. We build a complete digital foundation designed to help local customers find your business, understand your offer, and take action.",
     benefits: [
@@ -21,7 +22,7 @@ const services = [
       "Web designer analyzing website layout structures on a monitor",
     label: "Complete Web Presence",
     linkText: "Learn more about our web builds →",
-    linkHref: "/services#websites",
+    linkHref: "/cases#case-studies",
     reverse: false,
   },
 
@@ -40,7 +41,7 @@ const services = [
       "Marketing strategist reviewing a successful analytics dashboard",
     label: "Campaign Focused",
     linkText: "Explore landing page solutions →",
-    linkHref: "/services#landing-pages",
+    linkHref: "/cases#case-studies",
     reverse: true,
   },
 
@@ -54,12 +55,12 @@ const services = [
       "Client portals and business applications built around your specific workflows and requirements.",
       "Scalable Next.js applications designed to integrate your data, automate processes, and grow with your business.",
     ],
-    image: gmb,
+    image: dashBoard,
     imageAlt:
       "Business admin dashboard displaying company operations and performance data",
     label: "Custom Business Software",
     linkText: "Explore custom application solutions →",
-    linkHref: "/services#web-apps",
+    linkHref: "/cases#case-studies",
     reverse: false,
   },
 ];
@@ -83,7 +84,7 @@ export default function WebServices() {
               >
                 <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 p-3 shadow-2xl">
                   {/* Main Image */}
-                  <div className="relative aspect-4/3 overflow-hidden rounded-xl bg-slate-800">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-slate-800">
                     <Image
                       src={
                         service.image
@@ -104,148 +105,12 @@ export default function WebServices() {
                   </div>
 
                   {/* Website UI Preview */}
-                  {service.id === "websites" && (
-                    <div className="absolute bottom-6 left-6 w-[72%] max-w-sm overflow-hidden rounded-xl border border-slate-700 bg-white shadow-2xl sm:bottom-8 sm:left-8">
-                      {/* Browser Header */}
-                      <div className="flex items-center justify-between border-b border-slate-200 px-3 py-2.5">
-                        <div className="flex items-center gap-1.5">
-                          <span className="h-2 w-2 rounded-full bg-slate-300" />
-                          <span className="h-2 w-2 rounded-full bg-slate-300" />
-                          <span className="h-2 w-2 rounded-full bg-slate-300" />
-                        </div>
-
-                        <span className="text-[8px] font-medium text-[#677385]">
-                          localbusiness.co
-                        </span>
-                      </div>
-
-                      {/* UI Content */}
-                      <div className="p-4">
-                        <div className="h-2 w-24 rounded bg-slate-200" />
-
-                        <div className="mt-3 h-3 w-3/4 rounded bg-slate-800" />
-
-                        <div className="mt-2 h-2 w-full rounded bg-slate-200" />
-
-                        <div className="mt-1.5 h-2 w-4/5 rounded bg-slate-200" />
-
-                        <div className="mt-4 flex gap-2">
-                          <div className="h-7 w-20 rounded bg-amber-600" />
-                          <div className="h-7 w-16 rounded border border-slate-200 bg-white" />
-                        </div>
-                      </div>
-                    </div>
-                  )}
+                   
 
                   {/* Landing Page Analytics Preview */}
-                  {service.id === "landing-pages" && (
-                    <div className="absolute bottom-6 right-6 w-[68%] max-w-sm overflow-hidden rounded-xl border border-slate-700 bg-white p-4 shadow-2xl sm:bottom-8 sm:right-8">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-[8px] font-bold uppercase tracking-wider text-[#677385]">
-                            Campaign Results
-                          </p>
-
-                          <p className="mt-1 text-xl font-extrabold text-slate-950">
-                            +38.4%
-                          </p>
-                        </div>
-
-                        <span className="rounded-md bg-[#b55a00] px-2 py-1 text-[8px] font-bold text-white">
-                          Growing
-                        </span>
-                      </div>
-
-                      <div className="mt-4 flex items-end gap-1.5">
-                        {[35, 48, 42, 61, 55, 72, 86].map(
-                          (height, index) => (
-                            <div
-                              key={index}
-                              className="flex-1 rounded-t-sm bg-amber-600"
-                              style={{ height: `${height}px` }}
-                            />
-                          )
-                        )}
-                      </div>
-                    </div>
-                  )}
 
                   {/* Admin Dashboard Preview */}
-                  {service.id === "web-apps" && (
-                    <div className="absolute bottom-6 right-6 w-[74%] max-w-sm overflow-hidden rounded-xl border border-slate-700 bg-white shadow-2xl sm:bottom-8 sm:right-8">
-                      {/* Dashboard Header */}
-                      <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
-                        <div>
-                          <p className="text-[8px] font-bold uppercase tracking-wider text-slate-400">
-                            Business Dashboard
-                          </p>
-
-                          <p className="mt-1 text-sm font-bold text-slate-950">
-                            Operations Overview
-                          </p>
-                        </div>
-
-                        <div className="flex h-7 w-7 items-center justify-center rounded-md bg-amber-600/10">
-                          <div className="h-2.5 w-2.5 rounded-full bg-amber-600" />
-                        </div>
-                      </div>
-
-                      {/* Dashboard Metrics */}
-                      <div className="grid grid-cols-2 gap-2 p-3">
-                        <div className="rounded-lg bg-slate-100 p-3">
-                          <p className="text-[8px] font-medium text-slate-400">
-                            Active Clients
-                          </p>
-
-                          <p className="mt-1 text-lg font-extrabold text-slate-950">
-                            128
-                          </p>
-                        </div>
-
-                        <div className="rounded-lg bg-slate-100 p-3">
-                          <p className="text-[8px] font-medium text-slate-400">
-                            Open Tasks
-                          </p>
-
-                          <p className="mt-1 text-lg font-extrabold text-slate-950">
-                            24
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Dashboard Activity */}
-                      <div className="px-3 pb-3">
-                        <div className="rounded-lg border border-slate-200 p-3">
-                          <div className="flex items-center justify-between">
-                            <span className="text-[8px] font-bold text-slate-500">
-                              Recent Activity
-                            </span>
-
-                            <span className="text-[8px] font-semibold text-amber-600">
-                              View all
-                            </span>
-                          </div>
-
-                          <div className="mt-3 space-y-2">
-                            <div className="flex items-center gap-2">
-                              <span className="h-2 w-2 rounded-full bg-amber-600" />
-                              <div className="h-2 flex-1 rounded bg-slate-200" />
-                            </div>
-
-                            <div className="flex items-center gap-2">
-                              <span className="h-2 w-2 rounded-full bg-slate-300" />
-                              <div className="h-2 w-4/5 rounded bg-slate-200" />
-                            </div>
-
-                            <div className="flex items-center gap-2">
-                              <span className="h-2 w-2 rounded-full bg-slate-300" />
-                              <div className="h-2 w-3/5 rounded bg-slate-200" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
+                  
                 </div>
               </div>
 

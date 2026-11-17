@@ -1,7 +1,47 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 import team from "../images/team.jpg";
 
 export default function ServicesCTA() {
+  const router = useRouter();
+  const [firstName, setFirstName] = useState("");
+  const [businessType, setBusinessType] = useState("");
+  const [websiteUrl, setWebsiteUrl] = useState("");
+  const [phone, setPhone] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      await addDoc(collection(db, "leads"), {
+        firstName,
+        businessType,
+        websiteUrl,
+        phone,
+        submittedAt: new Date(),
+        formOrigin: "services-strategy-form",
+      });
+
+      router.push("/contact/success");
+    } catch (error) {
+      console.error("Services strategy request submission error:", error);
+      setSubmitError(
+        "We couldn't submit your request. Please try again in a moment.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section className="bg-slate-950">
       <div className="mx-auto max-w-5xl px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
@@ -23,33 +63,9 @@ export default function ServicesCTA() {
           </div>
 
           <form
-            name="services-strategy-request"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
             className="mx-auto mt-10 max-w-3xl"
           >
-            {/* Required for Netlify form detection */}
-            <input
-              type="hidden"
-              name="form-name"
-              value="services-strategy-request"
-            />
-
-            {/* Honeypot spam protection */}
-            <div className="hidden">
-              <label htmlFor="bot-field">
-                Don&apos;t fill this out if you&apos;re human:
-              </label>
-              <input
-                id="bot-field"
-                name="bot-field"
-                type="text"
-                tabIndex="-1"
-                autoComplete="off"
-              />
-            </div>
-
             <div className="grid gap-6 sm:grid-cols-2">
               {/* First Name */}
               <div>
@@ -66,6 +82,8 @@ export default function ServicesCTA() {
                   type="text"
                   required
                   autoComplete="given-name"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                   placeholder="Your first name"
                   className="mt-2 block w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
                 />
@@ -85,6 +103,8 @@ export default function ServicesCTA() {
                   name="businessType"
                   type="text"
                   required
+                  value={businessType}
+                  onChange={(e) => setBusinessType(e.target.value)}
                   placeholder="e.g. Plumbing, Dental, Legal"
                   className="mt-2 block w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
                 />
@@ -107,6 +127,8 @@ export default function ServicesCTA() {
                   name="websiteUrl"
                   type="url"
                   inputMode="url"
+                  value={websiteUrl}
+                  onChange={(e) => setWebsiteUrl(e.target.value)}
                   placeholder="https://yourbusiness.com"
                   className="mt-2 block w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
                 />
@@ -128,22 +150,37 @@ export default function ServicesCTA() {
                   required
                   autoComplete="tel"
                   inputMode="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   placeholder="+27 00 000 0000"
                   className="mt-2 block w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
                 />
               </div>
             </div>
 
+            {submitError && (
+              <p role="alert" className="mt-5 text-sm text-amber-600">
+                {submitError}
+              </p>
+            )}
+
             {/* Submit Area */}
             <div className="mt-8 flex flex-col gap-5 border-t border-slate-800 pt-8 sm:flex-row sm:items-center sm:justify-between">
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center rounded-lg bg-[#d73d00] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-[#b63200] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950 sm:w-auto"
+                disabled={isSubmitting}
+                className="inline-flex w-full items-center justify-center rounded-lg bg-[#d13d00] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-[#b63200] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-950 sm:w-auto"
               >
-                Request Free Custom Strategy
-                <span className="ml-2 text-base" aria-hidden="true">
-                  →
-                </span>
+                {isSubmitting ? (
+                  "Submitting Strategy Request..."
+                ) : (
+                  <>
+                    Request Free Custom Strategy
+                    <span className="ml-2 text-base" aria-hidden="true">
+                      →
+                    </span>
+                  </>
+                )}
               </button>
 
               {/* Human Element */}

@@ -21,7 +21,7 @@ const solutionLinks = [
 const socialLinks = [
   {
     label: "Instagram",
-    href: "https://instagram.com/localliftdigital",
+    href: "https://www.instagram.com/localliftdigital.rsa/",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect
@@ -46,7 +46,7 @@ const socialLinks = [
   },
   {
     label: "Facebook",
-    href: "https://facebook.com/localliftdigital",
+    href: "https://www.facebook.com/share/1DWGmwTpQ5/",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.3H8v3h2.6v8h2.9Z" />
@@ -55,7 +55,7 @@ const socialLinks = [
   },
   {
     label: "TikTok",
-    href: "https://tiktok.com/@localliftdigital",
+    href: "https://tiktok.com/@localliftdigital.rsa",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M15.5 3c.3 1.8 1.3 3.1 3 3.5v3.1c-1.2-.1-2.2-.5-3.1-1.1v6.1c0 3.3-2.2 5.4-5.3 5.4-2.9 0-5.1-2.1-5.1-4.9 0-3.1 2.5-5.2 5.8-5.2.3 0 .6 0 .9.1v3.1c-.3-.1-.6-.2-.9-.2-1.4 0-2.5.9-2.5 2.2 0 1.2.9 2 2.1 2 1.4 0 2.1-.9 2.1-2.5V3h3Z" />
@@ -64,7 +64,7 @@ const socialLinks = [
   },
   {
     label: "WhatsApp",
-    href: "https://wa.me/27000000000",
+    href: "https://wa.me/27694483699",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path
@@ -76,6 +76,15 @@ const socialLinks = [
           d="M9 8.5c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c.6 1.1 1.5 1.9 2.6 2.5l.6-.6c.2-.2.4-.2.6-.1l1.6.7c.3.1.4.3.3.6-.2.8-.7 1.4-1.4 1.6-1.1.3-3.1-.5-4.8-2.1-1.5-1.4-2.4-3.2-2.4-4.3 0-.4.2-.8.4-1.1Z"
           fill="currentColor"
         />
+      </svg>
+    ),
+  },
+  {
+    label: "YouTube",
+    href: "https://youtube.com/@localliftdigital-rsa?si=phkhct9YqBKqpzgj",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
       </svg>
     ),
   },
