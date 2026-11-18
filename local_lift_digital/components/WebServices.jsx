@@ -1,10 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-// import team from "../images/team.jpg";
-import webpage from "../images/Apex Flow Plumbing Hero Mockup.png";
-import convert from "../images/converting-site.png";
-// import gmb from "../images/Gmb.png";
-import dashBoard from "../images/Local Lift Digital Dashboard.png";
 
 const services = [
   {
@@ -17,9 +11,7 @@ const services = [
       "Fast Next.js performance for a smoother experience across desktop and mobile.",
       "Optimized user flows that guide visitors from discovery to enquiry or booking.",
     ],
-    image: webpage,
-    imageAlt:
-      "Web designer analyzing website layout structures on a monitor",
+    videoSrc: "/videos/converting-website.mp4",
     label: "Complete Web Presence",
     linkText: "Learn more about our web builds →",
     linkHref: "/cases#case-studies",
@@ -36,9 +28,7 @@ const services = [
       "Focused messaging that removes distractions and gets visitors to act.",
       "Conversion-driven forms and call-to-action sections designed to generate leads.",
     ],
-    image: convert,
-    imageAlt:
-      "Marketing strategist reviewing a successful analytics dashboard",
+    videoSrc: "/videos/landing-page.mp4",
     label: "Campaign Focused",
     linkText: "Explore landing page solutions →",
     linkHref: "/cases#case-studies",
@@ -55,9 +45,7 @@ const services = [
       "Client portals and business applications built around your specific workflows and requirements.",
       "Scalable Next.js applications designed to integrate your data, automate processes, and grow with your business.",
     ],
-    image: dashBoard,
-    imageAlt:
-      "Business admin dashboard displaying company operations and performance data",
+    videoSrc: "/videos/custom-apps.mp4",
     label: "Custom Business Software",
     linkText: "Explore custom application solutions →",
     linkHref: "/cases#case-studies",
@@ -83,18 +71,22 @@ export default function WebServices() {
                 }`}
               >
                 <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 p-3 shadow-2xl">
-                  {/* Main Image */}
-                  <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-slate-800">
-                    <Image
-                      src={
-                        service.image
-                          ? service.image
-                          : team
-                      }
-                      alt={service.imageAlt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
+                  {/* Main Video */}
+                  <div
+                    className={`relative ${
+                      service.id === "landing-pages"
+                        ? "aspect-[1/1]"
+                        : "aspect-[16/9]"
+                    } overflow-hidden rounded-xl bg-slate-800`}
+                  >
+                    <video
+                      src={service.videoSrc}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="metadata"
+                      className="h-full w-full object-cover"
                     />
 
                     {/* Subtle readability layer */}

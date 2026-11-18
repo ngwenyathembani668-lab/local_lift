@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import auto from "../images/automation.png";
-import gmb from "../images/Gmbo.png";
+import auto from "../images/BrightSmile Dental AI Chat Mockup.png";
 
 const services = [
   {
@@ -15,9 +14,6 @@ const services = [
       "Review-gathering systems that make it easier for happy customers to leave feedback.",
       "Monthly profile updates that keep your business information fresh and active.",
     ],
-    image: gmb,
-    imageAlt:
-      "Local Lift Digital team member updating local business listing details on a tablet",
     linkText: "Learn more about GMB optimization →",
     linkHref: "/cases#case-studies",
     reverse: false,
@@ -60,15 +56,27 @@ export default function GrowthServices() {
                 }`}
               >
                 <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 p-3 shadow-2xl">
-                  {/* Main Image */}
+                  {/* Main Video or Image */}
                   <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-slate-800">
-                    <Image
-                      src={service.image}
-                      alt={service.imageAlt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
-                    />
+                    {service.id === "gmb" ? (
+                      <video
+                        src="/videos/gmb-ranking.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <Image
+                        src={service.image}
+                        alt={service.imageAlt}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
+                      />
+                    )}
 
                     <div
                       className="absolute inset-0 bg-slate-950/10"
