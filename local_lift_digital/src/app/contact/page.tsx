@@ -1,8 +1,11 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 
+
+
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import ContactAuditForm from "@/components/ContactAuditForm";
 
 export const metadata: Metadata = {
   title: "Contact Our Growth Team | Local Lift Digital",
@@ -111,177 +114,7 @@ export default function ContactPage() {
 
           {/* Right Column - Contact Form */}
           <div className="flex items-start">
-            <div className="w-full border border-slate-800 border-t-4 border-t-amber-600 bg-slate-900 p-6 sm:p-8 lg:p-10">
-              <div className="mb-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
-                  Request Your Audit
-                </p>
-
-                <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-                  Tell us what you&apos;re working toward.
-                </h2>
-
-                <p className="mt-3 text-sm leading-6 text-slate-400">
-                  Give us a few details about your business and we&apos;ll
-                  identify where digital growth opportunities may exist.
-                </p>
-              </div>
-
-              <form
-                name="agency-contact"
-                method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                action="/contact/success"
-                className="space-y-6"
-              >
-                {/* Netlify Form Identification */}
-                <input type="hidden" name="form-name" value="agency-contact" />
-
-                {/* Netlify Honeypot */}
-                <div className="hidden" aria-hidden="true">
-                  <label htmlFor="bot-field">bot-field</label>
-                  <input
-                    id="bot-field"
-                    name="bot-field"
-                    type="text"
-                    tabIndex={-1}
-                    autoComplete="off"
-                  />
-                </div>
-
-                {/* Full Name */}
-                <div>
-                  <label
-                    htmlFor="full-name"
-                    className="mb-2 block text-sm font-semibold text-white"
-                  >
-                    Full Name
-                  </label>
-
-                  <input
-                    id="full-name"
-                    name="full-name"
-                    type="text"
-                    autoComplete="name"
-                    required
-                    placeholder="Your full name"
-                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
-                  />
-                </div>
-
-                {/* Business Name */}
-                <div>
-                  <label
-                    htmlFor="business-name"
-                    className="mb-2 block text-sm font-semibold text-white"
-                  >
-                    Business Name
-                  </label>
-
-                  <input
-                    id="business-name"
-                    name="business-name"
-                    type="text"
-                    autoComplete="organization"
-                    required
-                    placeholder="Your business name"
-                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
-                  />
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label
-                    htmlFor="email-address"
-                    className="mb-2 block text-sm font-semibold text-white"
-                  >
-                    Email Address
-                  </label>
-
-                  <input
-                    id="email-address"
-                    name="email-address"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    placeholder="you@yourbusiness.com"
-                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
-                  />
-                </div>
-
-                {/* Phone */}
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="mb-2 block text-sm font-semibold text-white"
-                  >
-                    Phone Number
-                  </label>
-
-                  <input
-                    id="phone"
-                    name="phone-number"
-                    type="tel"
-                    autoComplete="tel"
-                    placeholder="+27 00 000 0000"
-                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
-                  />
-                </div>
-
-                {/* Service Needed */}
-                <div>
-                  <label
-                    htmlFor="service-needed"
-                    className="mb-2 block text-sm font-semibold text-white"
-                  >
-                    Service Needed
-                  </label>
-
-                  <select
-                    id="service-needed"
-                    name="service-needed"
-                    required
-                    defaultValue=""
-                    className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition-colors focus:border-amber-600 focus:ring-2 focus:ring-amber-600"
-                  >
-                    <option value="" disabled>
-                      Select a service
-                    </option>
-                    <option value="Website Design">Website Design</option>
-                    <option value="Google Business Profile">
-                      Google Business Profile
-                    </option>
-                    <option value="AI Automation">AI Automation</option>
-                    <option value="Custom Business Applications">
-                      Custom Business Applications
-                    </option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-
-                {/* Submit */}
-                <button
-                  type="submit"
-                  className="w-full bg-amber-600 px-6 py-4 text-sm font-bold text-white transition-colors hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-slate-900"
-                >
-                  Send Message &amp; Request Audit
-                </button>
-
-                <p className="text-center text-xs leading-5 text-[#7085a3]">
-                  By submitting this form, you agree to allow Local Lift
-                  Digital to use your information to respond to your enquiry.
-                  See our{" "}
-                  <a
-                    href="/privacy"
-                    className="text-slate-400 underline decoration-slate-600 underline-offset-2 transition-colors hover:text-amber-600"
-                  >
-                    Privacy Policy
-                  </a>
-                  .
-                </p>
-              </form>
-            </div>
+            <ContactAuditForm />
           </div>
         </section>
       </main>

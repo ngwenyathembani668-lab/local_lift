@@ -31,6 +31,34 @@ export default function ServicesCTA() {
         formOrigin: "services-strategy-form",
       });
 
+      try {
+        const response = await fetch(
+          process.env.NEXT_PUBLIC_MAKE_WEBHOOK_URL || "YOUR_MAKE_WEBHOOK_URL",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              firstName,
+              businessType,
+              websiteUrl,
+              phone,
+              formOrigin: "services-strategy-form",
+              submittedAt: new Date().toISOString(),
+            }),
+          },
+        );
+
+        if (!response.ok) {
+          throw new Error(
+            `Make.com webhook responded with status ${response.status}`,
+          );
+        }
+      } catch (error) {
+        console.error("Failed to trigger services Make.com webhook:", error);
+      }
+
       router.push("/contact/success");
     } catch (error) {
       console.error("Services strategy request submission error:", error);

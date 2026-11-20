@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 import CookieConsent from "../../components/CookieConsent";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
@@ -41,6 +42,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className="bg-slate-950 text-white font-sans antialiased"
       >
+        <WhatsAppButton />
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];

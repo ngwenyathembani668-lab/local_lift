@@ -2,7 +2,7 @@ const pricingTiers = [
   {
     name: "Local Lift Starter",
     target: "New or small businesses",
-    price: "R1,499",
+    price: "R199",
     popular: false,
     description:
       "A focused digital foundation designed to help smaller businesses start generating consistent local enquiries.",
@@ -16,12 +16,12 @@ const pricingTiers = [
   {
     name: "Digital Growth Pack",
     target: "Growing local service brands",
-    price: "R2,999",
+    price: "R499",
     popular: true,
     description:
       "A complete local growth system for businesses ready to build authority, capture more leads, and stay visible.",
     features: [
-      "Complete 5-Page Converting Website",
+      "Complete 5-8 Page Converting Website",
       "Continuous GMB Optimization with monthly updates",
       "Premium lead capture systems",
     ],
@@ -30,7 +30,7 @@ const pricingTiers = [
   {
     name: "AI Elite Automation",
     target: "Established businesses looking to scale operations",
-    price: "R4,999",
+    price: "R900",
     popular: false,
     description:
       "Advanced automation for established businesses that want to reduce manual work and respond to leads around the clock.",

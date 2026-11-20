@@ -3,7 +3,7 @@ import BlogHero from "../../../components/BlogHero";
 import Footer from "../../../components/Footer";
 import FeaturedArticle from "../../../components/FeaturedArticle";
 import RecentArticles from "../../../components/RecentArticles";
-import NewsletterBox from "../../../components/NewsLetterBox";
+import BlogNewsletterForm from "@/components/BlogNewsletterForm";
 
 const articles = [
   {
@@ -128,7 +128,7 @@ export default async function BlogPage({ searchParams }) {
         <BlogHero />
         <FeaturedArticle />
         <RecentArticles articles={filteredArticles} />
-        <NewsletterBox />
+        <BlogNewsletterForm />
       </div>
 
       <Footer />

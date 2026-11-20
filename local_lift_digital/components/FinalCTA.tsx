@@ -33,6 +33,35 @@ export default function FinalCTA() {
         formOrigin: "homepage-lead",
       });
 
+      try {
+        const response = await fetch(
+          process.env.NEXT_PUBLIC_MAKE_WEBHOOK_URL || "YOUR_MAKE_WEBHOOK_URL",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              fullName,
+              businessName,
+              phone,
+              email,
+              mainGoal,
+              formOrigin: "homepage-lead",
+              submittedAt: new Date().toISOString(),
+            }),
+          },
+        );
+
+        if (!response.ok) {
+          throw new Error(
+            `Make.com webhook responded with status ${response.status}`,
+          );
+        }
+      } catch (error) {
+        console.error("Failed to trigger homepage Make.com webhook:", error);
+      }
+
       router.push("/contact/success");
     } catch (error) {
       console.error("Homepage lead submission error:", error);
