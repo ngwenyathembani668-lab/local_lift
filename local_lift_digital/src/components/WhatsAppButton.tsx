@@ -10,7 +10,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Local Lift Digital on WhatsApp"
-      className="group fixed bottom-64 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-[#1ebe5d] sm:bottom-48 sm:right-6 md:bottom-36"
+      className="group fixed bottom-64 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-[#1ebe5d] sm:bottom-48 sm:right-6 md:bottom-20"
     >
       <span className="pointer-events-none absolute right-full mr-3 hidden whitespace-nowrap rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 text-xs font-medium text-white sm:group-hover:block sm:group-focus-visible:block">
         Chat with Thembani
